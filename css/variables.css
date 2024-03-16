@@ -1,3 +1,81 @@
 :root{
-    --color-primary: #fff;
+    --color-orange: #ff702a;
+    --color-white: #fff;
+    --color-background: #1e1d2b;
+    --color-black: #000;
+    --color-cream: #ffefe8;
+    --color-menu: #2c2b47;
+    
+}
+@font-face {
+    font-family: "Poppins-Black";
+    src: url(../storage/fonts/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+    font-family: "Poppins-BlackItalic";
+    src: url(../storage/fonts/Poppins/Poppins-BlackItalic.ttf);
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../storage/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "Poppins-BoldItalic";
+    src: url(../storage/fonts/Poppins/Poppins-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    src: url(../storage/fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Poppins-ExtraBoldItalic";
+    src: url(../storage/fonts/Poppins/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Poppins-ExtraLight";
+    src: url(../storage/fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: "Poppins-ExtraLightItalic";
+    src: url(../storage/fonts/Poppins/Poppins-ExtraLightItalic.ttf);
+}
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url(../storage/fonts/Poppins/Poppins-Italic.ttf);
+}
+@font-face {
+    font-family: "Poppins-Light";
+    src: url(../storage/fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: "Poppins-LightItalic";
+    src: url(../storage/fonts/Poppins/Poppins-LightItalic.ttf);
+}
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url(../storage/fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "Poppins-MediumItalic";
+    src: url(../storage/fonts/Poppins/Poppins-MediumItalic.ttf);
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../storage/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../storage/fonts/Poppins/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Poppins-SemiBoldItalic";
+    src: url(../storage/fonts/Poppins/Poppins-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Poppins-Thin";
+    src: url(../storage/fonts/Poppins/Poppins-Thin.ttf);
+}
+@font-face {
+    font-family: "Poppins-ThinItalic";
+    src: url(../storage/fonts/Poppins/Poppins-ThinItalic.ttf);
 }
