@@ -198,3 +198,8 @@ body{
         display: none;
     }
 }
+@media screen and (max-height: 600px) {
+    body{
+        font-size: 10px;
+    }
+}
