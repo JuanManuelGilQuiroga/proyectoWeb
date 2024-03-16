@@ -8,9 +8,10 @@
 }
 body{
     width: 100vw;
+    background: var(--color-background);
 }
 .header{
-    background: red;
+    /*background: red;*/
     padding: 3%;
     height: 10vh;
     display: flex;
@@ -22,6 +23,7 @@ body{
 }
 .nav__target i{
     font-size: 1.5em;
+    color: var(--color-black);
 }
 .nav__links{
     background: var(--color-menu);
@@ -57,8 +59,54 @@ body{
     transition: clip-path .4s;
 }
 
-.img{
-    height: 50px;
+
+/*AQUI EMPIEZA LA PRIMERA SECTION*/
+.home{
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-areas: 
+    "info"
+    "image";
+}
+.home__info{
+    /*background: green;*/
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.home__title{
+    font-size: 3em;
+    color: var(--color-orange);
+    text-align: center;
+}
+.home__paragraph{
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--color-white);
+}
+.home__button{
+    margin: 3%;
+    padding: 2% 5%;
+    border: none;
+    background: var(--color-orange);
+}
+.home__button h2{
+    color: var(--color-white);
+}
+
+.home__image{
+    padding: 10%;
+    /*background: blue;*/
+    grid-area: image;
+}
+.home__image img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 @media screen and (min-width: 600px){
     .header{
