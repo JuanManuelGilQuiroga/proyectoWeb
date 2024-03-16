@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins-Medium";
 }
 body{
     width: 100vw;
@@ -62,6 +62,7 @@ body{
 
 /*AQUI EMPIEZA LA PRIMERA SECTION*/
 .home{
+    padding: 5%;
     height: 90vh;
     display: grid;
     grid-template-columns: 1fr;
@@ -71,6 +72,7 @@ body{
     "image";
 }
 .home__info{
+    outline: 1px solid red;
     /*background: green;*/
     grid-area: info;
     display: flex;
@@ -84,7 +86,6 @@ body{
     text-align: center;
 }
 .home__paragraph{
-    font-size: 1.5em;
     text-align: center;
     color: var(--color-white);
 }
@@ -94,12 +95,13 @@ body{
     border: none;
     background: var(--color-orange);
 }
-.home__button h2{
+.home__button h3{
     color: var(--color-white);
 }
 
 .home__image{
-    padding: 10%;
+    outline: 1px solid red;
+    padding: 5%;
     /*background: blue;*/
     grid-area: image;
 }
