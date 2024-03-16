@@ -110,6 +110,64 @@ body{
     object-fit: cover;
     object-position: center;
 }
+
+
+/*AQUI EMPIEZA LA SEGUNDA SECTION*/
+
+.about{
+    padding: 5%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-areas: 
+    "info"
+    "image";
+}
+.about__info{
+    /*background: green;*/
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about__head{
+    color: var(--color-orange);
+}
+.about__title{
+    font-size: 1.5em;
+}
+.about__title,
+.about__paragraph{
+    text-align: center;
+    color: var(--color-white);
+}
+.about__paragraph{
+    line-height: 1.2em;
+}
+.about__button{
+    margin: 3%;
+    padding: 2% 5%;
+    border: none;
+    background: var(--color-orange);
+}
+.about__button h3{
+    color: var(--color-white);
+}
+.about__image{
+    outline: 1px solid red;
+    /*background: blue;*/
+    grid-area: image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about__image img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 @media screen and (min-width: 600px){
     .header{
         width: 100vw;
