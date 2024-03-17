@@ -10,7 +10,11 @@ body{
     width: 100vw;
     background: var(--color-background);
 }
+a:hover{
+    cursor: pointer;
+}
 .header{
+    position: sticky;
     /*background: red;*/
     z-index: 1;
     padding: 3%;
@@ -22,9 +26,9 @@ body{
 .header__title{
     color: var(--color-orange);
 }
-.nav__target i{
-    font-size: 1.5em;
-    color: var(--color-black);
+.toggle__menu i{
+    font-size: 2em;
+    color: var(--color-white);
 }
 .main__nav{
     position: fixed;
@@ -51,19 +55,7 @@ body{
     color: var(--color-white);
     text-decoration: none;
 }
-@media screen and (min-width:760px) {
-    .main__nav{
-        position: static;
-    }
-    .main__menu{
-        position: static;
-        flex-direction: row;
-        transform: translateY(0);
-    }
-    .toggle__menu{
-        display: none;
-    }
-}
+
 
 /*.nav__links{
     background: var(--color-menu);
@@ -143,6 +135,7 @@ body{
     padding: 5%;
     /*background: blue;*/
     grid-area: image;
+
 }
 .home__image img{
     width: 100%;
@@ -422,13 +415,14 @@ body{
     align-items: center;
 }
 .contact__title{
+    font-size: 1.5em;
     text-align: center;
     font-family: "Poppins-Regular";
 }
 .contact__button{
     width: 120px;
     border: none;
-    padding: 2%;
+    height: 30px;
     background: var(--color-orange);
 }
 .contact__button p{
@@ -488,7 +482,7 @@ body{
     color: var(--color-white);
     text-decoration: none;
 }
-@media screen and (min-width: 600px){
+/*@media screen and (min-width: 600px){
     .header{
         width: 100vw;
         padding: 3%;
@@ -516,6 +510,143 @@ body{
     }
     .nav__target{
         display: none;
+    }
+}*/
+@media screen and (min-width:760px) {
+    body{
+        font-size: 20px;
+    }
+    .main__nav{
+        width: 50%;
+        position: static;
+        outline: 1px solid red;
+    }
+    .main__menu{
+        height: auto;
+        background: none;
+        position: static;
+        flex-direction: row;
+        transform: translateY(0);
+    }
+    .toggle__menu{
+        display: none;
+    }
+
+    /*SECTION1*/
+    .home{
+        padding: 0 5%;
+        height: 90vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "info image";
+    }
+    .home__info{
+        padding-left: 10%;
+        align-self: center;
+        height: 60%;
+        align-items: start;
+    }
+    .home__title{
+        font-size: 4em;
+        text-align: start;
+    }
+    .home__paragraph{
+        text-align: start;
+    }
+    .home__button{
+        margin: 3% 0;
+    }
+    .home__image{
+        display: flex;
+        justify-content: center;
+    }
+    .home__image img{
+        width: 90%;
+        align-self: center;
+    }
+    .about{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "image info";
+    }
+    .about__info{
+        padding-left: 10%;
+        align-self: center;
+        height: 70%;
+        align-items: start;
+    }
+    .about__head{
+        text-align: start;
+    }
+    .about__title{
+        font-size: 2em;
+        text-align: start;
+    }
+    .about__paragraph{
+        text-align: start;
+    }
+    .about__button{
+        margin: 3% 0;
+    }
+    .about__image{
+        display: flex;
+        justify-content: center;
+    }
+    .about__image img{
+        width: 90%;
+        align-self: center;
+    }
+    .menu{
+        height: 100vh;
+    }
+    .menu__title,
+    .service__title{
+        width: 100%;
+        font-size: 3em;
+    }
+    .menu__cards{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "card__1 card__2 card__3";
+        grid-gap: none;
+    }
+    .service{
+        height: 100vh;
+    }
+    .service__cards{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "card__1 card__2 card__3";
+    }
+    .contact{
+        height: 80vh;
+    }
+    .contact__div{
+        height: 80%;
+    }
+    .contact__title{
+        font-size: 2em;
+    }
+    .contact__button{
+        width: 180px;
+        height: 50px;
+    }
+    .contact__button p{
+        font-size: 1.5em;
+    }
+    .footer{
+        height: 50vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "menu__Links servive information contact";
+    }
+    .footer a{
+        font-size: 1em;
     }
 }
 @media screen and (max-height: 600px) {
