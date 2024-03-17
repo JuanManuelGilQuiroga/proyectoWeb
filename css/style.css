@@ -396,7 +396,59 @@ body{
     color: var(--color-white);
     font-family: "Poppins-Regular";
 }
-
+.footer{
+    padding: 5% 15%;
+    height: 120vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1.7fr) 1.5fr 1fr;
+    grid-template-areas: 
+    "menu__Links"
+    "servive"
+    "information"
+    "contact";
+}
+.footer__menu{
+    /*background: blue;*/
+    grid-area: menu__Links;
+}
+.footer__servive{
+    /*background: red;*/
+    grid-area: servive;
+}
+.footer__information{
+    /*background: green;*/
+    grid-area: information;
+}
+.footer__contact{
+    /*background: yellow;*/
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__circles{
+    display: flex;
+}
+.footer__circles i{
+    font-size: 2em;
+    color: var(--color-orange);
+}
+.footer h2{
+    margin-bottom: 5%;
+    color: var(--color-white);
+}
+.footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer a{
+    font-size: 1.3em;
+    color: var(--color-white);
+    text-decoration: none;
+}
 @media screen and (min-width: 600px){
     .header{
         width: 100vw;
