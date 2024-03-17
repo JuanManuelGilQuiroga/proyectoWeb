@@ -168,6 +168,101 @@ body{
     object-fit: cover;
     object-position: center;
 }
+
+/*AQUI EMPIEZA LA TERCERA SECTION*/
+.menu{
+    height: 180vh;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas: 
+    "titles"
+    "cards";
+}
+.menu__titles{
+    /*background: red;*/
+    grid-area: titles;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu__head{
+    color: var(--color-orange);
+}
+.menu__title{
+    text-align: center;
+    width: 80%;
+    font-size: 1.5em;
+    color: var(--color-white);
+}
+.menu__cards{
+    /*background: blue;*/
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "card__1"
+    "card__2"
+    "card__3";
+    grid-gap: 1%;
+    justify-items: center;
+}
+.menu__cards > div:nth-child(1){
+    /*background: white;*/
+    grid-area: card__1;
+}
+.menu__cards > div:nth-child(2){
+    /*background: green;*/
+    grid-area: card__2;
+}
+.menu__cards > div:nth-child(3){
+    /*background: yellow;*/
+    grid-area: card__3;
+}
+.menu__card{
+    background: var(--color-cream);
+    position: relative;
+    align-self: center;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu__card > i{
+    background: var(--color-orange);
+    margin: 2%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+}
+.card__image{
+    /*background: blue;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__image img{
+    width: 60%;
+    object-fit: cover;
+    object-position: center;
+}
+.card__info > h3{
+    text-align: center;
+    font-family: "Poppins-Light";
+}
+.card__info > p{
+    text-align: center;
+    font-family: "Poppins-Regular";
+}
+.card__info p:last-child{
+    color: var(--color-orange);
+}
 @media screen and (min-width: 600px){
     .header{
         width: 100vw;
