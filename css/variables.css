@@ -1,5 +1,11 @@
 :root{
-    --color-primary: #fff;
+    --color-white: #fff;
+    --color-grey: #efefef;
+    --color-black: #1c1b1b;
+}
+@font-face {
+    font-family: "Staatliches";
+    src: url(../storage/fonts/Staatliches/Staatliches-Regular.ttf);
 }
 @font-face {
     font-family: "NunitoSans-Bold";

@@ -6,21 +6,25 @@
     font-family: "NunitoSans-Medium";
 }
 body{
+    height: 100vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 6fr;
+    grid-template-rows: .5fr 2fr;
     grid-template-areas:
     "header"
     "main";
+}
+a{
+    text-decoration: none;
 }
 a:hover{
     cursor: pointer;
 }
 .header{
+    background: var(--color-black);
     padding: 3%;
     grid-area: header;
-    outline: 1px solid black;
     height: 10vh;
     display: flex;
     justify-content: space-between;
@@ -28,12 +32,19 @@ a:hover{
 }
 .toggle__menu i{
     font-size: 2em;
+    color: var(--color-white);
 }
 .toggle__menu i:hover{
     cursor: pointer;
 }
+.header__title{
+    font-size: 2em;
+    font-family: "Staatliches";
+    color: var(--color-white);
+}
 .header__carrito i{
     font-size: 2em;
+    color: var(--color-white);
 }
 .header__nav{
     position: fixed;
@@ -56,6 +67,10 @@ a:hover{
 .header__menu__show{
     transform: translateY(0);
 }
+.menu__item{
+    color: var(--color-white);
+    font-family: "Staatliches";
+}
 .carrito__info{
     display: none;
 }
@@ -63,14 +78,123 @@ a:hover{
     display: none;
 }
 
+::-webkit-scrollbar{
+    width: .7em;
+
+}
+
+
 main{
+    height: 90vh;
     grid-area: main;
-    outline: 1px solid black;
+    padding: 3%;
+}
+main h2{
+    margin: 5%;
 }
 .main__list{
-    display: flex;
-    flex-wrap: wrap;
+    height: 80vh;
+    overflow-y: scroll;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+    "producto1 producto2"
+    "producto3 producto4"
+    "producto5 producto6"
+    "producto7 producto8"
+    "producto9 producto10"
+    "producto11 producto12"
+    "producto13 producto14"
+    "producto15 .";
+    grid-gap: 20px;
 }
-img{
-    width: 100px;
+.item__1{
+    grid-area: producto1;
+}
+.item__2{
+    grid-area: producto2;
+}
+.item__3{
+    grid-area: producto3;
+}
+.item__4{
+    grid-area: producto4;
+}
+.item__5{
+    grid-area: producto5;
+}
+.item__6{
+    grid-area: producto6;
+}
+.item__7{
+    grid-area: producto7;
+}
+.item__8{
+    grid-area: producto8;
+}
+.item__9{
+    grid-area: producto9;
+}
+.item__10{
+    grid-area: producto10;
+}
+.item__11{
+    grid-area: producto11;
+}
+.item__12{
+    grid-area: producto12;
+}
+.item__13{
+    grid-area: producto13;
+}
+.item__14{
+    grid-area: producto14;
+}
+.item__15{
+    grid-area: producto15;
+}
+.item__img{
+    width: 100%;
+}
+.item__img img{
+    object-fit: cover;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.item__info{
+    margin-top: -6px;
+    background: var(--color-black);
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.item__info p{
+    color: var(--color-white);
+    font-size: .8em;
+}
+.info__div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info__div button{
+    background: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    padding: 1% 3% 1%;
+}
+.info__div a{
+    color: var(--color-black);
+    font-size: .6em;
+    font-family: "NunitoSans-Bold";
+}
+
+@media screen and (min-width: 760px) {
+    
 }
