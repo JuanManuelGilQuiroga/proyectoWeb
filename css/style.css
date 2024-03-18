@@ -14,9 +14,9 @@ a:hover{
     cursor: pointer;
 }
 .header{
-    position: sticky;
-    /*background: red;*/
-    z-index: 1;
+    width: 100vw;
+    position: fixed;
+    background: var(--color-background);
     padding: 3%;
     height: 10vh;
     display: flex;
@@ -31,24 +31,28 @@ a:hover{
     color: var(--color-white);
 }
 .main__nav{
-    position: fixed;
-}
-.main__menu{
-    position: fixed;
-    list-style: none;
+    position: absolute;
+    transition: transform 0.3s;
+    transform: translateY(-200%);
     top: 10vh;
     right: 0;
     left: 0;
     height: 50vh;
+    z-index: 10;
+}
+.main__menu{
+    height: 100%;
+    list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     background: var(--color-menu);
-    transition: transform 0.3s;
-    transform: translateY(-200%);
+    
 }
-.main__menu--show{
+.main__nav--show{
+    display: block;
+    position: absolute;
     transform: translateY(0);
 }
 .menu__link{
@@ -90,7 +94,6 @@ a:hover{
     color: var(--color-white);
 }*/
 
-
 /*AQUI EMPIEZA LA PRIMERA SECTION*/
 .home{
     padding: 5%;
@@ -103,6 +106,7 @@ a:hover{
     "image";
 }
 .home__info{
+    margin-top: 10vh;
     /*outline: 1px solid red;*/
     /*background: green;*/
     grid-area: info;
@@ -131,6 +135,7 @@ a:hover{
 }
 
 .home__image{
+    margin-top: 10vh;
     /*outline: 1px solid red;*/
     padding: 5%;
     /*background: blue;*/
@@ -255,6 +260,7 @@ a:hover{
     grid-area: card__3;
 }
 .menu__card{
+    z-index: -1;
     background: var(--color-cream);
     position: relative;
     align-self: center;
@@ -351,6 +357,7 @@ a:hover{
     grid-area: card__3;
 }
 .service__card{
+    z-index: -1;
     position: relative;
     align-self: center;
     height: 300px;
@@ -465,7 +472,7 @@ a:hover{
 }
 .footer__circles i{
     font-size: 2em;
-    color: var(--color-orange);
+    color: var(--color-white);
 }
 .footer h2{
     margin-bottom: 5%;
@@ -519,14 +526,16 @@ a:hover{
     .main__nav{
         width: 50%;
         position: static;
-        outline: 1px solid red;
+        position: static;
+        transform: translateY(0);
+        height: auto;
+        
+        
     }
     .main__menu{
-        height: auto;
         background: none;
-        position: static;
         flex-direction: row;
-        transform: translateY(0);
+ 
     }
     .toggle__menu{
         display: none;
