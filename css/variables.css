@@ -1,3 +1,31 @@
 :root{
     --color-primary: #fff;
 }
+@font-face {
+    font-family: "NunitoSans-Bold";
+    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-Bold.ttf);
+}
+@font-face {
+    font-family: "NunitoSans-SemiBold";
+    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-SemiBold.ttf);
+}
+@font-face {
+    font-family: "NunitoSans-ExtraBold";
+    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "NunitoSans-Medium";
+    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-Medium.ttf);
+}
+@font-face {
+    font-family: "NunitoSans-Regular";
+    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-Regular.ttf);
+}
+@font-face {
+    font-family: "NunitoSans-Light";
+    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-Light.ttf);
+}
+@font-face {
+    font-family: "NunitoSans-ExtraLight";
+    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-ExtraLight.ttf);
+}
