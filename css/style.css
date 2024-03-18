@@ -3,5 +3,74 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "NunitoSans-Medium";
+}
+body{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 6fr;
+    grid-template-areas:
+    "header"
+    "main";
+}
+a:hover{
+    cursor: pointer;
+}
+.header{
+    padding: 3%;
+    grid-area: header;
+    outline: 1px solid black;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle__menu i{
+    font-size: 2em;
+}
+.toggle__menu i:hover{
+    cursor: pointer;
+}
+.header__carrito i{
+    font-size: 2em;
+}
+.header__nav{
+    position: fixed;
+}
+.header__menu{
+    position: fixed;
+    list-style: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    transition: transform 0.3s;
+    transform: translateY(-200%);
+}
+.header__menu__show{
+    transform: translateY(0);
+}
+.carrito__info{
+    display: none;
+}
+.header__copy{
+    display: none;
+}
+
+main{
+    grid-area: main;
+    outline: 1px solid black;
+}
+.main__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    width: 100px;
 }

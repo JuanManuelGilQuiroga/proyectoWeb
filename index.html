@@ -8,29 +8,35 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
-    <div>
-        <h1>CampusShop</h1>
-        <nav>
-            <ul>
-                <li><a href="#"><i class='bx bxs-star'></i>Todos los productos</a></li>
-                <li><a href="#"><i class='bx bxs-star'></i>Abrigos</a></li>
-                <li><a href="#"><i class='bx bxs-star'></i>Camisetas</a></li>
-                <li><a href="#"><i class='bx bxs-star'></i>Pantalones</a></li>
+    <div class="header">
+        <div class="toggle__menu" id="toggle__menu">
+            <i class='bx bx-menu'></i>
+        </div>
+        <h2 class="header__title">CampusShop</h2>
+        <nav class="header__nav" id="header__nav">
+            <ul class="header__menu" id="header__menu">
+                <li><a href="#" class="menu__item" id="link__1"><i class='bx bxs-star'></i>Todos los productos</a></li>
+                <li><a href="#" class="menu__item" id="link__2"><i class='bx bxs-star'></i>Abrigos</a></li>
+                <li><a href="#" class="menu__item" id="link__3"><i class='bx bxs-star'></i>Camisetas</a></li>
+                <li><a href="#" class="menu__item" id="link__4"><i class='bx bxs-star'></i>Pantalones</a></li>
             </ul>
         </nav>
-        <div>
-            <i class='bx bxs-cart'></i>
-            <a href="">Carrito</a>
-            <p>3</p>
+        <div class="header__carrito">
+            <a href="#"><i class='bx bxs-cart'></i></a>
+            <div class="carrito__info">
+                <a href="" class="carrito__title">Carrito</a>
+                <p class="carrito__number">3</p>
+            </div>
         </div>
-        <div>
+        <div class="header__copy">
             <i class='bx bx-copyright'></i>
             <p>2023 Camper</p>
         </div>
     </div>
+    <script src="js/main.js"></script>
     <main>
-        <h1>Todos los productos</h1>
-        <div>
+        <h2>Todos los productos</h2>
+        <div class="main__list">
             <div class="item__1">
                 <div>
                     <img src="storage/img/default.webp" alt="">
