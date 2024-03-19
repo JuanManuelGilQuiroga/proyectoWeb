@@ -1,9 +1,12 @@
 @import url(variables.css);
 .carrito__main__list{
+    width: 100%;
     height: 70vh;
     overflow-y: scroll;
-    padding: 20px;
-    display: grid;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    /*display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(15, 1fr);
     grid-template-areas: 
@@ -22,67 +25,81 @@
     "producto13"
     "producto14"
     "producto15";
-    grid-gap: 20px;
+    grid-gap: 15px;*/
 }
 .carrito__item__1{
     grid-area: producto1;
+    display: none;
 }
 .carrito__item__2{
     grid-area: producto2;
 }
 .carrito__item__3{
     grid-area: producto3;
+    display: none;
 }
 .carrito__item__4{
     grid-area: producto4;
+    display: remove;
 }
 .carrito__item__5{
     grid-area: producto5;
+    display: none;
 }
 .carrito__item__6{
     grid-area: producto6;
+    display: none;
 }
 .carrito__item__7{
     grid-area: producto7;
+    display: none;
 }
 .carrito__item__8{
     grid-area: producto8;
+    display: none;
 }
 .carrito__item__9{
     grid-area: producto9;
 }
 .carrito__item__10{
     grid-area: producto10;
+    display: none;
 }
 .carrito__item__11{
     grid-area: producto11;
+    display: none;
 }
 .carrito__item__12{
     grid-area: producto12;
+    display: none;
 }
 .carrito__item__13{
     grid-area: producto13;
+    display: none;
 }
 .carrito__item__14{
     grid-area: producto14;
+    display: none;
 }
 .carrito__item__15{
     grid-area: producto15;
-}
-.carrito__item__img{
-    width: 100%;
+    display: none;
 }
 .carrito__main__list > div{
+    margin: 1%;
+    width: 100%;
+    height: 15vh;
     border-radius: 15px;
     transition: all 0.3s;
     background: var(--color-black);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 .carrito__main__list > div:active{
     overflow: hidden;
     transform: rotate(5deg);
-    box-shadow:  0px 0px 20px rgb(255, 178, 105);
+    box-shadow:  0px 0px 8px rgb(255, 0, 0);
 }
 .carrito__item__img{
     height: 80%;
@@ -90,6 +107,95 @@
 .carrito__item__img img{
     object-fit: cover;
     height: 100%;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border-radius: 15px;
+}
+.carrito__item__info{
+    height: 70%;
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) .5fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "info__one info__two trash"
+    "info__three info__four trash";
+    place-items: start;
+    color: var(--color-white);
+}
+.carrito__item__info >div p:first-child{
+    font-family: "NunitoSans-Regular";
+    font-size: .8em;
+}
+.carrito__item__info >div p:last-child{
+    font-family: "NunitoSans-Bold";
+    font-size:.8em;
+}
+.item__info__one{
+    grid-area: info__one;
+}
+.item__info__two{
+    grid-area: info__two;
+}
+.item__info__two p:last-child{
+    background: var(--color-white);
+    color: var(--color-black);
+    padding-left: 5px;
+    border-radius: 10px;
+}
+.item__info__three{
+    grid-area: info__three;
+}
+
+.item__info__four{
+    grid-area: info__four;
+}
+.carrito__item__info > i{
+    grid-area: trash;
+    font-size: 1.5em;
+    transition: .2s;
+    place-self: center;
+}
+.carrito__item__info > i:active{
+    color: red;
+}
+
+.carrito__main__footer{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.button__vaciar{
+    width: 30%;
+    background: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: .8em;
+    cursor: pointer;
+}
+.button__vaciar p{
+    padding: auto;
+}
+.main__footer__div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.total p:last-child{
+    font-family: "NunitoSans-Bold";
+}
+.button__comprar{
+    width: 50%;
+    background: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: .8em;
+    cursor: pointer;
 }
