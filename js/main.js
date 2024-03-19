@@ -1,25 +1,25 @@
 const toggleMenuElement = document.getElementById("toggle__menu");
-const mainMenuElement = document.getElementById("header__menu")
+const mainMenuElement = document.getElementById("header__nav")
 const linkMenuElement = document.getElementById("link__1")
 const link2MenuElement = document.getElementById("link__2")
 const link3MenuElement = document.getElementById("link__3")
 const link4MenuElement = document.getElementById("link__4")
 
 toggleMenuElement.addEventListener("click", ()=>{
-    setTimeout(()=>{mainMenuElement.classList.toggle("header__menu__show")}, 1000)
+    setTimeout(()=>{mainMenuElement.classList.toggle("header__nav__show")}, 1000)
     
 })
 linkMenuElement.addEventListener("click", ()=>{
-    mainMenuElement.classList.remove("header__menu__show");
+    mainMenuElement.classList.remove("header__nav__show");
 })
 link2MenuElement.addEventListener("click", ()=>{
-    mainMenuElement.classList.remove("header__menu__show");
+    mainMenuElement.classList.remove("header__nav__show");
 })
 link3MenuElement.addEventListener("click", ()=>{
-    mainMenuElement.classList.remove("header__menu__show");
+    mainMenuElement.classList.remove("header__nav__show");
 })
 link4MenuElement.addEventListener("click", ()=>{
-    mainMenuElement.classList.remove("header__menu__show");
+    mainMenuElement.classList.remove("header__nav__show");
 })
 
 // boton menu
