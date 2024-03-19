@@ -1,0 +1,95 @@
+@import url(variables.css);
+.carrito__main__list{
+    height: 70vh;
+    overflow-y: scroll;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-areas: 
+    "producto1"
+    "producto2"
+    "producto3"
+    "producto4"
+    "producto5"
+    "producto6"
+    "producto7"
+    "producto8"
+    "producto9"
+    "producto10"
+    "producto11"
+    "producto12"
+    "producto13"
+    "producto14"
+    "producto15";
+    grid-gap: 20px;
+}
+.carrito__item__1{
+    grid-area: producto1;
+}
+.carrito__item__2{
+    grid-area: producto2;
+}
+.carrito__item__3{
+    grid-area: producto3;
+}
+.carrito__item__4{
+    grid-area: producto4;
+}
+.carrito__item__5{
+    grid-area: producto5;
+}
+.carrito__item__6{
+    grid-area: producto6;
+}
+.carrito__item__7{
+    grid-area: producto7;
+}
+.carrito__item__8{
+    grid-area: producto8;
+}
+.carrito__item__9{
+    grid-area: producto9;
+}
+.carrito__item__10{
+    grid-area: producto10;
+}
+.carrito__item__11{
+    grid-area: producto11;
+}
+.carrito__item__12{
+    grid-area: producto12;
+}
+.carrito__item__13{
+    grid-area: producto13;
+}
+.carrito__item__14{
+    grid-area: producto14;
+}
+.carrito__item__15{
+    grid-area: producto15;
+}
+.carrito__item__img{
+    width: 100%;
+}
+.carrito__main__list > div{
+    border-radius: 15px;
+    transition: all 0.3s;
+    background: var(--color-black);
+    display: flex;
+    justify-content: space-between;
+}
+.carrito__main__list > div:active{
+    overflow: hidden;
+    transform: rotate(5deg);
+    box-shadow:  0px 0px 20px rgb(255, 178, 105);
+}
+.carrito__item__img{
+    height: 80%;
+}
+.carrito__item__img img{
+    object-fit: cover;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
