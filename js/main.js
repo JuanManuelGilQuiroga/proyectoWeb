@@ -6,7 +6,8 @@ const link3MenuElement = document.getElementById("link__3")
 const link4MenuElement = document.getElementById("link__4")
 
 toggleMenuElement.addEventListener("click", ()=>{
-    mainMenuElement.classList.toggle("header__menu__show");
+    setTimeout(()=>{mainMenuElement.classList.toggle("header__menu__show")}, 1000)
+    
 })
 linkMenuElement.addEventListener("click", ()=>{
     mainMenuElement.classList.remove("header__menu__show");
@@ -19,4 +20,14 @@ link3MenuElement.addEventListener("click", ()=>{
 })
 link4MenuElement.addEventListener("click", ()=>{
     mainMenuElement.classList.remove("header__menu__show");
+})
+
+// boton menu
+
+const botonMain = document.getElementById("rayas");
+botonMain.addEventListener("click", () => {
+    botonMain.classList.add("bx-tada");
+    setTimeout(() => {
+        botonMain.classList.remove("bx-tada")
+    }, 1000);
 })
