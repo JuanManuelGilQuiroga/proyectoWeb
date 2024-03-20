@@ -48,12 +48,20 @@ btnVaciar.addEventListener("click", ()=>{
     carritoTextoElement.classList.remove("eliminar__elemento");
     carritoListElement.classList.add("eliminar__elemento");
     totalElement.classList.add("eliminar__elemento");
+    document.getElementById("contador").innerText = 0;
 
 })
 btnComprar.addEventListener("click", ()=>{
     carritoTextoElement.classList.remove("eliminar__elemento");
     carritoListElement.classList.add("eliminar__elemento");
     totalElement.classList.add("eliminar__elemento");
+    document.getElementById("contador").innerText = 0;
 
 })
+
+function contadorCarrito(id) {
+    let contador = parseInt(document.getElementById(id).innerText);
+    contador++;
+    document.getElementById(id).innerText = contador;
+}
 
