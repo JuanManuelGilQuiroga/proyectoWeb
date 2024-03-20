@@ -34,10 +34,11 @@
             <p>2023 Camper</p>
         </div>
     </div>
-    <script src="../js/main.js"></script>
+
     <main>
         <h2>Carrito</h2>
-        <div class="carrito__main__list">
+        <p class="eliminar__elemento carrito__vacio" id="carrito__vacio">Tu carrito esta vacio :(</p>
+        <div class="carrito__main__list" id="carrito__main__list">
             <div class="carrito__item__1">
                 <div class="carrito__item__img">
                     <img src="../storage/img/black-abrigo.webp" alt="">
@@ -400,15 +401,16 @@
             </div>
         </div>
         <div class="carrito__main__footer">
-            <button class="button__vaciar"><p>Vaciar Carrito</p></button>
-            <div class="main__footer__div">
+            <button class="button__vaciar" id="button__vaciar"><p>Vaciar Carrito</p></button>
+            <div class="main__footer__div" id="total">
                 <div class="total">
                     <p>Total</p>
                     <p>$8.500</p>
                 </div>
-                <button class="button__comprar"><p>Comprar Ahora</p></button>
+                <button class="button__comprar" id="button__comprar"><p>Comprar Ahora</p></button>
             </div>
         </div>
     </main>
+    <script src="../js/main.js"></script>
 </body>
 </html>
