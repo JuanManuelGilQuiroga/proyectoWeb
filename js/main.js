@@ -26,6 +26,16 @@ link3MenuElement.addEventListener("click", ()=>{
 link4MenuElement.addEventListener("click", ()=>{
     mainMenuElement.classList.remove("header__nav__show");
 })
+
+// boton menu
+
+const botonMain = document.getElementById("rayas");
+botonMain.addEventListener("click", () => {
+    botonMain.classList.add("bx-tada");
+    setTimeout(() => {
+        botonMain.classList.remove("bx-tada")
+    }, 1000);
+})
 btnVaciar.addEventListener("click", ()=>{
     carritoTextoElement.classList.remove("eliminar__elemento");
     carritoListElement.classList.add("eliminar__elemento");
@@ -37,13 +47,4 @@ btnComprar.addEventListener("click", ()=>{
     carritoListElement.classList.add("eliminar__elemento");
     totalElement.classList.add("eliminar__elemento");
 
-})
-// boton menu
-
-const botonMain = document.getElementById("rayas");
-botonMain.addEventListener("click", () => {
-    botonMain.classList.add("bx-tada");
-    setTimeout(() => {
-        botonMain.classList.remove("bx-tada")
-    }, 1000);
 })

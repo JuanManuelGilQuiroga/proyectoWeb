@@ -75,13 +75,14 @@ a:hover{
     z-index: 10;
 }
 .header__menu{
+    z-index: 10;
     list-style: none;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: black;
+    background-color: var(--color-black);
 }
 .header__nav__show{
     transform: translateY(0);
@@ -89,6 +90,7 @@ a:hover{
 .menu__item{
     color: var(--color-white);
     font-family: "Staatliches";
+    z-index: 10;
 }
 .carrito__info{
     display: none;
@@ -239,6 +241,90 @@ main h2{
     
 }
 
-@media screen and (min-width: 760px) {
-    
+@media screen and (min-width:760px) {
+    body{
+        font-size: 20px;
+        background: var(--color-black);
+        grid-template-columns: .5fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "header main"
+        ;
+        place-items: center;
+    }
+    .header{
+        width: 100%;
+        position: initial;
+        height: 85vh;
+        flex-direction: column;
+        width: auto;
+        padding: 0;
+    }
+    .toggle__menu{
+        display: none;
+    }
+    .header__nav{
+        display: flex;
+        position: initial;
+        transform: initial;
+    }
+    .header__menu{
+        align-items: start;
+    }
+    .header__carrito{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .carrito__info{
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .carrito__info a{
+        color: var(--color-white);
+    }
+    .carrito__number{
+        background: var(--color-white);
+        padding: 3% 10%;
+        border-radius: 5px;
+    }
+    .header__copy{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__copy > *{
+        color: var(--color-white);
+    }
+
+    main{
+        width: 90%;
+        margin-top: 0;
+        background: var(--color-white);
+        place-self: center;
+        border-radius: 30px;
+    }
+    main h2{
+        margin: 0;
+        margin-left: 1.5%;
+    }
+    .main__list{
+        height: 75vh;
+        overflow-y: scroll;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "producto1 producto2 producto3 producto4"
+        "producto5 producto6 producto7 producto8"
+        "producto9 producto10 producto11 producto12"
+        "producto13 producto14 producto15 .";
+        grid-gap: 20px;
+    }
+    .item__info{
+        margin-top: -8px;
+    }
 }
