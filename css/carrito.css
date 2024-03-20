@@ -3,6 +3,7 @@
     position: absolute;
     top: 25%;
     align-self: center;
+    color: var(--color-black);
 }
 .carrito__main__list{
     width: 100%;
@@ -102,11 +103,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 23%;
 }
 .carrito__main__list > div:active{
-    overflow: hidden;
-    transform: rotate(5deg);
-    box-shadow:  0px 0px 8px rgb(255, 0, 0);
+    transform: scale(1.03);
+    box-shadow:  0px 0px 15px var(--color-black);
 }
 .carrito__item__img{
     height: 80%;
@@ -185,7 +189,8 @@
 }
 .main__footer__div{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 57%;
 }
 .total{
     display: flex;
@@ -207,9 +212,9 @@
     font-size: .8em;
     cursor: pointer;
 }
-.eliminar__elemento{
-    display: none;
-}
+
+
+
 @media screen and (min-width: 750px) {
     .carrito__main__list{
         height: 80vh;
@@ -227,9 +232,8 @@
         align-items: center;
     }
     .carrito__main__list > div:hover{
-        overflow-y: unset;
         box-shadow:  0px 0px 15px var(--color-black);
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
     .carrito__item__info{
         height: 80%;
@@ -295,4 +299,8 @@
         transform: scale(.9);
         box-shadow: 0px 0px 20px var(--color-white);
     }
+}
+
+.eliminar__elemento{
+    display: none;
 }

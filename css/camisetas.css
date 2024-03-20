@@ -31,9 +31,13 @@
 .camisetas__main__list > div{
     border-radius: 15px;
     transition: all 0.3s;
+
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
 }
 .camisetas__main__list > div:active{
-    transform: rotate(5deg);
+    transform: scale(1.03);
     box-shadow:  0px 0px 15px var(--color-black);
 }
 @media screen and (min-width: 750px) {
