@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: "Poppins-Medium";
 }
+::-webkit-scrollbar{
+    width: 0;
+
+}
 body{
     width: 100vw;
     background: var(--color-background);
