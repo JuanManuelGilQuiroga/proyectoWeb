@@ -1,4 +1,8 @@
 @import url(variables.css);
+.invisible{
+    display: none;
+    
+}
 .carrito__vacio{
     position: absolute;
     top: 25%;
@@ -246,8 +250,4 @@
 
 .eliminar__elemento{
     display: none;
-}
-.invisible{
-    display: none;
-    
 }

@@ -13,6 +13,8 @@ const btnComprar = document.getElementById("button__comprar")
 
 const mainElement = document.getElementById("main")
 
+
+
 toggleMenuElement.addEventListener("click", ()=>{
     setTimeout(()=>{mainMenuElement.classList.toggle("header__nav__show")}, 1000);
     mainElement.classList.add("main__z__index");
@@ -65,3 +67,37 @@ function contadorCarrito(id) {
     document.getElementById(id).innerText = contador;
 }
 
+// bton borrar
+const botonBorrar = document.getElementById('bx_boton');
+const botonBorrar2 = document.getElementById('bx_boton2');
+const botonBorrar3 = document.getElementById('bx_boton3');
+const totalCarrito = document.getElementById("total__carrito");
+
+botonBorrar.addEventListener("click", () => {
+    const nono = document.getElementById("nono");
+    nono.innerHTML = "";
+    nono.style.display = "none";
+    let contador = parseInt(document.getElementById("contador").innerText);
+    contador--;
+    document.getElementById("contador").innerText = contador;
+    document.getElementById("total__carrito").innerText = parseInt(document.getElementById("total__carrito").value)-300000;
+//    let total_carrito = parseInt(document.getElementById("total__carrito").value);
+//    totalCarrito -= 300;
+//    total_carrito.innerHTML = `${totalCarrito}`
+})
+botonBorrar2.addEventListener("click", () => {
+    const nono = document.getElementById("nono2");
+    nono.innerHTML = "";
+    nono.style.display = "none";
+    let contador = parseInt(document.getElementById("contador").innerText);
+    contador--;
+    document.getElementById("contador").innerText = contador;
+})
+botonBorrar3.addEventListener("click", () => {
+    const nono = document.getElementById("nono3");
+    nono.innerHTML = "";
+    nono.style.display = "none";
+    let contador = parseInt(document.getElementById("contador").innerText);
+    contador--;
+    document.getElementById("contador").innerText = contador;
+})
