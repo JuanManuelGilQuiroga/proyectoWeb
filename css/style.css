@@ -15,7 +15,7 @@ a:hover{
 }
 .header{
     width: 100vw;
-    position: fixed;
+    position: sticky;
     background: var(--color-background);
     padding: 3%;
     height: 10vh;
@@ -106,7 +106,6 @@ a:hover{
     "image";
 }
 .home__info{
-    margin-top: 10vh;
     /*outline: 1px solid red;*/
     /*background: green;*/
     grid-area: info;
@@ -135,7 +134,6 @@ a:hover{
 }
 
 .home__image{
-    margin-top: 10vh;
     /*outline: 1px solid red;*/
     padding: 5%;
     /*background: blue;*/
