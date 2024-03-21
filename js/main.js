@@ -75,29 +75,33 @@ const totalCarrito = document.getElementById("total__carrito");
 
 botonBorrar.addEventListener("click", () => {
     const nono = document.getElementById("nono");
-    nono.innerHTML = "";
     nono.style.display = "none";
     let contador = parseInt(document.getElementById("contador").innerText);
     contador--;
     document.getElementById("contador").innerText = contador;
-    document.getElementById("total__carrito").innerText = parseInt(document.getElementById("total__carrito").value)-300000;
-//    let total_carrito = parseInt(document.getElementById("total__carrito").value);
-//    totalCarrito -= 300;
-//    total_carrito.innerHTML = `${totalCarrito}`
+    let valorActual = parseFloat(totalCarrito.innerText.replace("$",""));
+    let nuevoValor = valorActual - 300000;
+    totalCarrito.innerText = "$" + nuevoValor;
+
 })
 botonBorrar2.addEventListener("click", () => {
     const nono = document.getElementById("nono2");
-    nono.innerHTML = "";
     nono.style.display = "none";
     let contador = parseInt(document.getElementById("contador").innerText);
     contador--;
     document.getElementById("contador").innerText = contador;
+    let valorActual = parseFloat(totalCarrito.innerText.replace("$",""));
+    let nuevoValor = valorActual - 140000;
+    totalCarrito.innerText = "$" + nuevoValor;
+    
 })
 botonBorrar3.addEventListener("click", () => {
     const nono = document.getElementById("nono3");
-    nono.innerHTML = "";
     nono.style.display = "none";
     let contador = parseInt(document.getElementById("contador").innerText);
     contador--;
     document.getElementById("contador").innerText = contador;
+    let valorActual = parseFloat(totalCarrito.innerText.replace("$",""));
+    let nuevoValor = valorActual - 90000;
+    totalCarrito.innerText = "$" + nuevoValor;
 })
