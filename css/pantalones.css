@@ -40,7 +40,7 @@
     transform: scale(1.03);
     box-shadow:  0px 0px 15px var(--color-black);
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 760px) {
     body{
         font-size: 20px;
         background: var(--color-black);

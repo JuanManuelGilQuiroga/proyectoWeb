@@ -162,7 +162,7 @@
 
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 760px) {
     .carrito__main__list{
         height: 80vh;
     } 
@@ -247,7 +247,26 @@
         box-shadow: 0px 0px 20px var(--color-white);
     }
 }
+@media (min-width: 1050px) and (max-width:1270px) {
+    .main__footer__div{
+        width: 50%;
+    }
+}
 
+@media (min-width: 900px) and (max-width:1050px) {
+    .main__footer__div{
+        width: 60%;
+    }
+}
+
+@media (min-width: 760px) and (max-width:900px){
+    .main__footer__div{
+        width: 60%;
+    }
+    .button__comprar{
+        height: 90%;
+    }
+}
 .eliminar__elemento{
     display: none;
 }
