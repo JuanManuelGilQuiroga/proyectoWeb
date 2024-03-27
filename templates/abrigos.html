@@ -22,9 +22,9 @@
             </ul>
         </nav>
         <div class="header__carrito">
-            <a href="carrito.html"><i class='bx bxs-cart'></i></a>
+            <a href="carrito"><i class='bx bxs-cart'></i></a>
             <div class="carrito__info">
-                <a href="carrito.html" class="carrito__title">Carrito</a>
+                <a href="carrito" class="carrito__title">Carrito</a>
                 <button class="carrito__number" id="contador">0</button>
             </div>
         </div>
@@ -39,60 +39,60 @@
         <div class="abrigos__main__list">
             <div class="abrigos__item__1">
                 <div class="item__img">
-                    <img src="../storage/img/black-abrigo.webp" alt="">
+                    <img src='{{data[0].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Abrigo 01</p>
+                    <p>{{data[0].get("description")}}</p>
                     <div class="info__div">
-                        <p>$150.000</p>
+                        <p>${{data[0].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
             <div class="abrigos__item__2">
                 <div class="item__img">
-                    <img src="../storage/img/brown-abrigo.webp" alt="">
+                    <img src='{{data[1].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Abrigo 02</p>
+                    <p>{{data[1].get("description")}}</p>
                     <div class="info__div">
-                        <p>$150.000</p>
+                        <p>${{data[1].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
             <div class="abrigos__item__3">
                 <div class="item__img">
-                    <img src="../storage/img/black-wash-abrigo.webp" alt="">
+                    <img src='{{data[6].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Abrigo 03</p>
+                    <p>{{data[6].get("description")}}</p>
                     <div class="info__div">
-                        <p>$150.000</p>
+                        <p>${{data[6].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
             <div class="abrigos__item__4">
                 <div class="item__img">
-                    <img src="../storage/img/green-abrigo.webp" alt="">
+                    <img src='{{data[7].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Abrigo 04</p>
+                    <p>{{data[7].get("description")}}</p>
                     <div class="info__div">
-                        <p>$150.000</p>
+                        <p>${{data[7].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
             <div class="abrigos__item__5">
                 <div class="item__img">
-                    <img src="../storage/img/off-white-abrigo.webp" alt="">
+                    <img src='{{data[12].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Abrigo 05</p>
+                    <p>{{data[12].get("description")}}</p>
                     <div class="info__div">
-                        <p>$150.000</p>
+                        <p>${{data[12].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>

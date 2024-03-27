@@ -1,25 +1,31 @@
 # flask --app app run --debug
+import requests
 from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.get("/")
 def index():
-    return render_template('index.html')
+    peticion = requests.get("https://660485882ca9478ea17e22bb.mockapi.io/allProduct")
+    return render_template('index.html', data=peticion.json())
 
 @app.get("/views/abrigos")
 def abrigos():
-    return render_template('abrigos.html')
+    peticion = requests.get("https://660485882ca9478ea17e22bb.mockapi.io/allProduct")
+    return render_template('abrigos.html', data=peticion.json())
 
 @app.get("/views/camisetas")
 def camisetas():
-    return render_template('camisetas.html')
+    peticion = requests.get("https://660485882ca9478ea17e22bb.mockapi.io/allProduct")
+    return render_template('camisetas.html', data=peticion.json())
 
 @app.get("/views/carrito")
 def carrito():
-    return render_template('carrito.html')
+    peticion = requests.get("https://660485882ca9478ea17e22bb.mockapi.io/allProduct")
+    return render_template('carrito.html', data=peticion.json())
 
 @app.get("/views/pantalones")
 def pantalones():
-    return render_template('pantalones.html')
+    peticion = requests.get("https://660485882ca9478ea17e22bb.mockapi.io/allProduct")
+    return render_template('pantalones.html', data=peticion.json())
 
-app.run()
+app.run(debug=True)

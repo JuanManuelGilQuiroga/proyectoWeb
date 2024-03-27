@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href='{{url_for("static", filename="css/style.css")}}'>
-    <link rel="stylesheet" href='{{url_for("static", filename="css/carrito.css")}}'>
+    <link rel="stylesheet" href='{{url_for("static", filename="css/pantalones.css")}}'>
 </head>
 <body>
     <div class="header">
@@ -39,60 +39,60 @@
         <div class="pantalones__main__list">
             <div class="pantalones__item__1">
                 <div class="item__img">
-                    <img src="../storage/img/purple-wash-pantalon.webp" alt="">
+                    <img src='{{data[4].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Pantalon 01</p>
+                    <p>{{data[4].get("description")}}</p>
                     <div class="info__div">
-                        <p>$70.000</p>
+                        <p>${{data[4].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
             <div class="pantalones__item__2">
                 <div class="item__img">
-                    <img src="../storage/img/black-wash-pantalon.webp" alt="">
+                    <img src='{{data[5].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Pantalon 02</p>
+                    <p>{{data[5].get("description")}}</p>
                     <div class="info__div">
-                        <p>$70.000</p>
+                        <p>${{data[5].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
             <div class="pantalones__item__3">
                 <div class="item__img">
-                    <img src="../storage/img/brown-pantalon.webp" alt="">
+                    <img src='{{data[10].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Pantalon 03</p>
+                    <p>{{data[10].get("description")}}</p>
                     <div class="info__div">
-                        <p>$70.000</p>
+                        <p>${{data[10].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
             <div class="pantalones__item__4">
                 <div class="item__img">
-                    <img src="../storage/img/light-blue-pantalon.webp" alt="">
+                    <img src='{{data[11].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Pantalon 04</p>
+                    <p>{{data[11].get("description")}}</p>
                     <div class="info__div">
-                        <p>$70.000</p>
+                        <p>${{data[11].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
             <div class="pantalones__item__5">
                 <div class="item__img">
-                    <img src="../storage/img/off-white-pantalon.webp" alt="">
+                    <img src='{{data[14].get("img")}}' alt="">
                 </div>
                 <div class="item__info">
-                    <p>Pantalon 05</p>
+                    <p>{{data[14].get("description")}}</p>
                     <div class="info__div">
-                        <p>$70.000</p>
+                        <p>${{data[14].get("value")}}</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
