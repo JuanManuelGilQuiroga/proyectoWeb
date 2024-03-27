@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/camisetas.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href='{{url_for("static", filename="css/style.css")}}'>
+    <link rel="stylesheet" href='{{url_for("static", filename="css/carrito.css")}}'>
 </head>
 <body>
     <div class="header">
@@ -16,16 +15,16 @@
         <h2 class="header__title">CampusShop</h2>
         <nav class="header__nav" id="header__nav">
             <ul class="header__menu" id="header__menu">
-                <li><a href="../index.html" class="menu__item" id="link__1"><i class='bx bxs-star'></i>Todos los productos</a></li>
-                <li><a href="abrigos.html" class="menu__item" id="link__2"><i class='bx bxs-star'></i>Abrigos</a></li>
-                <li><a href="#" class="menu__item" id="link__3"><i class='bx bxs-star'></i>Camisetas</a></li>
-                <li><a href="pantalones.html" class="menu__item" id="link__4"><i class='bx bxs-star'></i>Pantalones</a></li>
+                <li><a href="index" class="menu__item" id="link__1"><i class='bx bxs-star'></i>Todos los productos</a></li>
+                <li><a href="abrigos" class="menu__item" id="link__2"><i class='bx bxs-star'></i>Abrigos</a></li>
+                <li><a href="camisetas" class="menu__item" id="link__3"><i class='bx bxs-star'></i>Camisetas</a></li>
+                <li><a href="#" class="menu__item" id="link__4"><i class='bx bxs-star'></i>Pantalones</a></li>
             </ul>
         </nav>
         <div class="header__carrito">
-            <a href="carrito.html"><i class='bx bxs-cart'></i></a>
+            <a href="carrito"><i class='bx bxs-cart'></i></a>
             <div class="carrito__info">
-                <a href="carrito.html" class="carrito__title">Carrito</a>
+                <a href="carrito" class="carrito__title">Carrito</a>
                 <button class="carrito__number" id="contador">0</button>
             </div>
         </div>
@@ -34,73 +33,71 @@
             <p>2023 Juan</p>
         </div>
     </div>
-   
+    
     <main id="main">
-        <h2>Camisetas</h2>
-        <div class="camisetas__main__list">
-            <div class="camisetas__item__1">
+        <h2>Pantalones</h2>
+        <div class="pantalones__main__list">
+            <div class="pantalones__item__1">
                 <div class="item__img">
-                    <img src="../storage/img/plum-prefect-camiseta.webp" alt="">
+                    <img src="../storage/img/purple-wash-pantalon.webp" alt="">
                 </div>
                 <div class="item__info">
-                    <p>Camiseta 01</p>
+                    <p>Pantalon 01</p>
                     <div class="info__div">
-                        <p>$90.000</p>
+                        <p>$70.000</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
-            <div class="camisetas__item__2">
+            <div class="pantalones__item__2">
                 <div class="item__img">
-                    <img src="../storage/img/coconut-milk-camiseta.webp" alt="">
+                    <img src="../storage/img/black-wash-pantalon.webp" alt="">
                 </div>
                 <div class="item__info">
-                    <p>Camiseta 02</p>
+                    <p>Pantalon 02</p>
                     <div class="info__div">
-                        <p>$90.000</p>
+                        <p>$70.000</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
-            <div class="camisetas__item__3">
+            <div class="pantalones__item__3">
                 <div class="item__img">
-                    <img src="../storage/img/black-camiseta.webp" alt="">
+                    <img src="../storage/img/brown-pantalon.webp" alt="">
                 </div>
                 <div class="item__info">
-                    <p>Camiseta 03</p>
+                    <p>Pantalon 03</p>
                     <div class="info__div">
-                        <p>$90.000</p>
+                        <p>$70.000</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
-            <div class="camisetas__item__4">
+            <div class="pantalones__item__4">
                 <div class="item__img">
-                    <img src="../storage/img/black-wash-camiseta.webp" alt="">
+                    <img src="../storage/img/light-blue-pantalon.webp" alt="">
                 </div>
                 <div class="item__info">
-                    <p>Camiseta 04</p>
+                    <p>Pantalon 04</p>
                     <div class="info__div">
-                        <p>$90.000</p>
+                        <p>$70.000</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
-            <div class="camisetas__item__5">
+            <div class="pantalones__item__5">
                 <div class="item__img">
-                    <img src="../storage/img/off-white-camiseta.webp" alt="">
+                    <img src="../storage/img/off-white-pantalon.webp" alt="">
                 </div>
                 <div class="item__info">
-                    <p>Camiseta 05</p>
+                    <p>Pantalon 05</p>
                     <div class="info__div">
-                        <p>$90.000</p>
+                        <p>$70.000</p>
                         <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
                     </div>
                 </div>
             </div>
-            
-            
         </div>
     </main>
-    <script src="../js/main.js"></script>
+    <script src='{{url_for("static", filename="js/main.js")}}'></script>
 </body>
