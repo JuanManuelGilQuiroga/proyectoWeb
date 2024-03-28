@@ -64,12 +64,12 @@
             </div>-->
             <div class="carrito__item__2 carrito__item" id="nono">
                 <div class="carrito__item__img">
-                    <img src="../storage/img/brown-abrigo.webp" alt="">
+                    <img src='{{data[1].get("img")}}' alt="">
                 </div>
                 <div class="carrito__item__info">
                     <div class="item__info__one">
                         <p>Nombre</p>
-                        <p>Abrigo 02</p>
+                        <p>{{data[1].get("description")}}</p>
                     </div>
                     <div class="item__info__two">
                         <p>Cantidad</p>
@@ -77,11 +77,11 @@
                     </div>
                     <div class="item__info__three">
                         <p>Precio</p>
-                        <p>$150.000</p>
+                        <p>${{data[1].get("value")}}</p>
                     </div>
                     <div class="item__info__four">
                         <p>Subtotal</p>
-                        <p>$300.000</p>
+                        <p>${{data[1].get("value")*2}}</p>
                     </div>
                     <i class='bx bxs-trash-alt' id='bx_boton'></i>
                 </div>
@@ -136,12 +136,12 @@
             </div>-->
             <div class="carrito__item__5 carrito__item" id="nono2">
                 <div class="carrito__item__img">
-                    <img src="../storage/img/purple-wash-pantalon.webp" alt="">
+                    <img src='{{data[4].get("img")}}' alt="">
                 </div>
                 <div class="carrito__item__info">
                     <div class="item__info__one">
                         <p>Nombre</p>
-                        <p>Pantalon 01</p>
+                        <p>{{data[4].get("description")}}</p>
                     </div>
                     <div class="item__info__two">
                         <p>Cantidad</p>
@@ -149,11 +149,11 @@
                     </div>
                     <div class="item__info__three">
                         <p>Precio</p>
-                        <p>$70.000</p>
+                        <p>${{data[4].get("value")}}</p>
                     </div>
                     <div class="item__info__four">
                         <p>Subtotal</p>
-                        <p>$140.000</p>
+                        <p>${{data[4].get("value")*2}}</p>
                     </div>
                     <i class='bx bxs-trash-alt' id='bx_boton2'></i>
                 </div>
@@ -232,12 +232,12 @@
             </div>-->
             <div class="carrito__item__9 carrito__item" id="nono3">
                 <div class="carrito__item__img">
-                    <img src="../storage/img/black-camiseta.webp" alt="">
+                    <img src='{{data[8].get("img")}}' alt="">
                 </div>
                 <div class="carrito__item__info">
                     <div class="item__info__one">
                         <p>Nombre</p>
-                        <p>Camiseta 03</p>
+                        <p>{{data[8].get("description")}}</p>
                     </div>
                     <div class="item__info__two">
                         <p>Cantidad</p>
@@ -245,11 +245,11 @@
                     </div>
                     <div class="item__info__three">
                         <p>Precio</p>
-                        <p>$90.000</p>
+                        <p>${{data[8].get("value")}}</p>
                     </div>
                     <div class="item__info__four">
                         <p>Subtotal</p>
-                        <p>$90.000</p>
+                        <p>${{data[8].get("value")}}</p>
                     </div>
                     <i class='bx bxs-trash-alt' id='bx_boton3'></i>
                 </div>
