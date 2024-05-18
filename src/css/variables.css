@@ -5,11 +5,11 @@
 }
 @font-face {
     font-family: "Staatliches";
-    src: url(../storage/fonts/Staatliches/Staatliches-Regular.ttf);
+    src: url(/fonts/Staatliches/Staatliches-Regular.ttf);
 }
 @font-face {
     font-family: "NunitoSans-Bold";
-    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-Bold.ttf);
+    src: url(/fonts/Nunito_Sans/NunitoSans_10pt-Bold.ttf);
 }
 @font-face {
     font-family: "NunitoSans-SemiBold";
@@ -17,11 +17,11 @@
 }
 @font-face {
     font-family: "NunitoSans-ExtraBold";
-    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-ExtraBold.ttf);
+    src: url(../../public/fonts/Nunito_Sans/NunitoSans_10pt-Medium.ttf);
 }
 @font-face {
     font-family: "NunitoSans-Medium";
-    src: url(../storage/fonts/Nunito_Sans/NunitoSans_10pt-Medium.ttf);
+    src: url(/fonts/Nunito_Sans/NunitoSans_10pt-Medium.ttf);
 }
 @font-face {
     font-family: "NunitoSans-Regular";
