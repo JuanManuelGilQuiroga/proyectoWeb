@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <script type="module" src="/src/js/components/product.js"></script>
+    <script type="module" src="/src/js/components/header.js"></script>
 </head>
 <body>
     <div class="header">
@@ -15,12 +16,7 @@
         </div>
         <h2 class="header__title">CampusShop</h2>
         <nav class="header__nav" id="header__nav">
-            <ul class="header__menu" id="header__menu">
-                <li><a href="#" class="menu__item" id="link__1"><i class='bx bxs-star'></i>Todos los productos</a></li>
-                <li><a href="views/abrigos.html" class="menu__item" id="link__2"><i class='bx bxs-star'></i>Abrigos</a></li>
-                <li><a href="views/camisetas.html" class="menu__item" id="link__3"><i class='bx bxs-star'></i>Camisetas</a></li>
-                <li><a href="views/pantalones.html" class="menu__item" id="link__4"><i class='bx bxs-star'></i>Pantalones</a></li>
-            </ul>
+            <my-header></my-header>
         </nav>
         <div class="header__carrito">
             <a href="views/carrito.html"><i class='bx bxs-cart'></i></a>
@@ -41,6 +37,5 @@
             <product-item></product-item>
         </div>
     </main>
-    <script src="src/js/main.js"></script>
 </body>
 </html>
