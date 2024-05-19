@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <script type="module" src="/src/js/components/product.js"></script>
     <script type="module" src="/src/js/components/header.js"></script>
+    <script type="module" src="/src/js/components/cartCounter.js"></script>
 </head>
 <body>
     <div class="header">
@@ -19,11 +20,7 @@
             <my-header></my-header>
         </nav>
         <div class="header__carrito">
-            <a href="views/carrito.html"><i class='bx bxs-cart'></i></a>
-            <div class="carrito__info">
-                <a href="views/carrito.html" class="carrito__title">Carrito</a>
-                <button class="carrito__number" id="contador">0</button>
-            </div>
+            <cart-counter></cart-counter>
         </div>
         <div class="header__copy">
             <i class='bx bx-copyright'></i>
