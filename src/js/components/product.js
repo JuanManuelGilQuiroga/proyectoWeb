@@ -1,25 +1,30 @@
 import { LitElement,html,css } from "lit";
-import { getData } from "./data";
+import { getData, getAllProducts } from "./data";
 
 export class Product extends LitElement{
     static properties = {
-        products: { type: Object },
+        products: { type: Array },
         section: { type: String }
     }   
      
     constructor(){
         super();
-        this.products = {}
+        this.products = []
         this.section = localStorage.getItem("section")
     }
 
     async getProducts(){
-        this.products = await getData();
+        this.products = await getAllProducts();
+        this.requestUpdate()
     }
 
     connectedCallback() {
         super.connectedCallback();
-        this.getProducts();
+        this.getProducts()
+    }
+
+    addToCart(item){
+        //AQUI ES LA FUNCION CON LA CUAL SE VA A SUBIR EL PRODUCTO AL CARRITO
     }
 
     static styles = css`
@@ -125,21 +130,33 @@ export class Product extends LitElement{
     }
     ` 
     render(){
+        let filteredProducts = []
+        if(this.section!=="carrito"){
+            if(this.section==="ropa"){
+                filteredProducts = this.products
+            } else{
+                filteredProducts = this.products.filter(val => val.categoria === this.section)
+            }
+        }
         return html`
         ${console.log(this.products)}
-
-        <div class="product__item">
-            <div class="item__img">
-                <img src="val" alt="">
-            </div>
-            <div class="item__info">
-                <p>Abrigo 01</p>
-                <div class="info__div">
-                    <p>$150.000</p>
-                    <button class="button__agregar" onclick="contadorCarrito('contador')" >Agregar</button>
+        ${this.section !== "carrito" ? html`
+            ${filteredProducts.map(val=> html`
+            <div class="product__item">
+                <div class="item__img">
+                    <img src=${val.imagen} alt="">
+                </div>
+                <div class="item__info">
+                    <p>${val.nombre}</p>
+                    <div class="info__div">
+                        <p>$${val.precio}</p>
+                        <button class="button__agregar" @click=${()=>this.addToCart(val)} >Agregar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        `}
+            `)}
+           ` : html``
+        }`       
+    }
 }
 customElements.define("product-item", Product)

@@ -8,7 +8,7 @@ export class Header extends LitElement{
 
     constructor(){
         super();
-        this.section = localStorage.getItem("section") || "todosLosProductos";
+        this.section = localStorage.getItem("section") || "ropa";
     }
 
     static styles = css`
@@ -43,10 +43,10 @@ export class Header extends LitElement{
         ${console.log(this.section)}
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <ul class="header__menu" id="header__menu">
-                <li><a class="menu__item" id="link__1" @click=${()=>this.changeSection("todosLosProductos")}><i class='bx bxs-star'></i>Todos los productos</a></li>
-                <li><a class="menu__item" id="link__2" @click=${()=>this.changeSection("abrigos")}><i class='bx bxs-star'></i>Abrigos</a></li>
-                <li><a class="menu__item" id="link__3" @click=${()=>this.changeSection("camisetas")}><i class='bx bxs-star'></i>Camisetas</a></li>
-                <li><a class="menu__item" id="link__4" @click=${()=>this.changeSection("pantalones")}><i class='bx bxs-star'></i>Pantalones</a></li>
+                <li><a class="menu__item" id="link__1" @click=${()=>this.changeSection("ropa")}><i class='bx bxs-star'></i>Todos los productos</a></li>
+                <li><a class="menu__item" id="link__2" @click=${()=>this.changeSection("abrigo")}><i class='bx bxs-star'></i>Abrigos</a></li>
+                <li><a class="menu__item" id="link__3" @click=${()=>this.changeSection("camiseta")}><i class='bx bxs-star'></i>Camisetas</a></li>
+                <li><a class="menu__item" id="link__4" @click=${()=>this.changeSection("pantalon")}><i class='bx bxs-star'></i>Pantalones</a></li>
         </ul>
         `
     }
