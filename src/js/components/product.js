@@ -2,23 +2,26 @@ import { LitElement,html,css } from "lit";
 import { getData } from "./data";
 
 export class Product extends LitElement{
-    static get properties() {
-        return {
-            products: { type: Array }
-        };
-    }    
+    static properties = {
+        products: { type: Object },
+        section: { type: String }
+    }   
+     
     constructor(){
         super();
         this.products = {}
+        this.section = localStorage.getItem("section")
     }
+
     async getProducts(){
         this.products = await getData();
-        console.log(this.products)
     }
+
     connectedCallback() {
         super.connectedCallback();
         this.getProducts();
     }
+
     static styles = css`
     .product__item{
         border-radius: 15px;
@@ -123,9 +126,11 @@ export class Product extends LitElement{
     ` 
     render(){
         return html`
+        ${console.log(this.products)}
+
         <div class="product__item">
             <div class="item__img">
-                <img src="storage/img/black-abrigo.webp" alt="">
+                <img src="val" alt="">
             </div>
             <div class="item__info">
                 <p>Abrigo 01</p>
@@ -135,7 +140,6 @@ export class Product extends LitElement{
                 </div>
             </div>
         </div>
-        `
-    }
+        `}
 }
 customElements.define("product-item", Product)
