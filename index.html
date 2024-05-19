@@ -4,35 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <script type="module" src="/src/js/components/product.js"></script>
     <script type="module" src="/src/js/components/header.js"></script>
     <script type="module" src="/src/js/components/cartCounter.js"></script>
+    <script type="module" src="/src/js/components/cart.js"></script>
+    <script type="module" src="/src/js/components/grid.js"></script>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="toggle__menu" id="toggle__menu">
-            <i class='bx bx-menu' id="rayas"></i>
-        </div>
-        <h2 class="header__title">CampusShop</h2>
-        <nav class="header__nav" id="header__nav">
-            <my-header></my-header>
-        </nav>
-        <div class="header__carrito">
-            <cart-counter></cart-counter>
-        </div>
-        <div class="header__copy">
-            <i class='bx bx-copyright'></i>
-            <p>2023 Juan</p>
-        </div>
-    </div>
-    
-    <main id="main">
-        <h2>Todos los productos</h2>
-        <div class="main__list">
-            <product-item></product-item>
-        </div>
-    </main>
+    <my-grid></my-grid>
 </body>
 </html>

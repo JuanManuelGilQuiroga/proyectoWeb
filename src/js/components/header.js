@@ -32,6 +32,11 @@ export class Header extends LitElement{
         color: var(--color-white);
         font-family: "Staatliches";
     }
+    @media screen and (min-width:760px){
+        .header__menu{
+            align-items: start;
+        }
+    }
     `
     changeSection(sectionChanged){
         this.section = sectionChanged;
