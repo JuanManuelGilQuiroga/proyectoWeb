@@ -165,6 +165,16 @@
       "categoria": "abrigo",
       "cantidad": 1,
       "subtotal": 93900
+    },
+    {
+      "id": "camiseta3",
+      "nombre": "Off-white t-shirt",
+      "imagen": "https://www.youngla.com/cdn/shop/files/4043_off-white_001_03_05_floor_3a2abba2-84d9-4af3-ab8e-8b66931c1151_900x.jpg?v=1709165618",
+      "precio": 29900,
+      "producto": "ropa",
+      "categoria": "camiseta",
+      "cantidad": 1,
+      "subtotal": 29900
     }
   ]
 }

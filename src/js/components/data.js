@@ -41,3 +41,14 @@ export const postProducts = async (product) => {
     let res = await fetch("http://localhost:5501/carrito", config);
     let data = await res.json();
 }
+export const putProducts = async (newProduct) => {
+    let config = {
+        headers: {
+            "content-type": "application/json"
+        },
+        method: "PUT",
+        body: JSON.stringify(newProduct)
+    }
+    let res = await fetch("http://localhost:5501/carrito", config);
+    let data = await res.json();
+}
