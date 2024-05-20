@@ -1,15 +1,16 @@
 import { LitElement,html,css } from "lit";
-import { getData, getAllProducts } from "./data";
+import { getData, getAllProducts, postProducts } from "./data";
 
 export class Product extends LitElement{
     static properties = {
+        data: { type: Object},
         products: { type: Array },
         section: { type: String }
     }   
-     
     constructor(){
         super();
-        this.products = []
+        this.products = [];
+        this.data = {};
         this.section = localStorage.getItem("section")
     }
 
@@ -18,13 +19,21 @@ export class Product extends LitElement{
         this.requestUpdate()
     }
 
+    async getData(){
+        this.data = await getData();
+    }
+
     connectedCallback() {
         super.connectedCallback();
-        this.getProducts()
+        this.getProducts();
+        this.getData()
     }
 
     addToCart(item){
         //AQUI ES LA FUNCION CON LA CUAL SE VA A SUBIR EL PRODUCTO AL CARRITO
+        this.data.carrito.push(item)
+        postProducts(this.data)
+
     }
 
     static styles = css`
@@ -141,7 +150,7 @@ export class Product extends LitElement{
             }
         }
         return html`
-        ${console.log(filteredProducts)}
+        ${console.log(this.data)}
         ${this.section !== "carrito" ? html`
             ${filteredProducts.map(val=> html`
             <div class="product__item">

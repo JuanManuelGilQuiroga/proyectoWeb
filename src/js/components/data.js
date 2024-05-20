@@ -28,4 +28,14 @@ export const getAllProducts = async () => {
     let dataAll = [...dataHoodies, ...dataTShirts, ...dataJoggers];
     return dataAll
 }
-console.log(await getAllProducts())
+export const postProducts = async (product) => {
+    let config = {
+        headers: {
+            "content-type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify(product)
+    }
+    let res = await fetch("http://localhost:5500/campusShop.json", config);
+    let data = await res.json();
+}
