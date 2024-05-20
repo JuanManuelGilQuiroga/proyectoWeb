@@ -139,6 +139,7 @@ export class Cart extends LitElement{
         return html`
         ${this.section === "carrito" ? html`
             ${this.products.map(val => html`
+            <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
             <div class="carrito__item__2 carrito__item" id="nono">
                 <div class="carrito__item__img">
                     <img src=${val.imagen} alt="">

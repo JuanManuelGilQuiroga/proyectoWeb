@@ -30,7 +30,7 @@ export class MyGrid extends LitElement{
         box-sizing: border-box;
         font-family: "NunitoSans-Medium";
     }
-    body{
+    .body__container{
         height: 100vh;
         width: 100vw;
         display: grid;
@@ -167,22 +167,26 @@ export class MyGrid extends LitElement{
         height: 80vh;
         overflow-y: scroll;
         padding: 20px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        grid-template-areas: 
-        "producto1 producto2"
-        "producto3 producto4"
-        "producto5 producto6"
-        "producto7 producto8"
-        "producto9 producto10"
-        "producto11 producto12"
-        "producto13 producto14"
-        "producto15 .";
-        grid-gap: 20px;
+        display: flex;
+    }
+    product-item{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px
+    }
+    my-cart{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px
     }
     @media screen and (min-width:760px){
-        body{
+        .body__container{
             font-size: 20px;
             background: var(--color-black);
             grid-template-columns: .5fr 2fr;
@@ -241,6 +245,28 @@ export class MyGrid extends LitElement{
             margin: 0;
             margin-left: 1.5%;
         }
+        .main__list{
+            height: 75vh;
+            overflow-y: scroll;
+            padding: 20px;
+            display: flex;
+        }
+        product-item{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px
+        }
+        my-cart{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px
+        }
     }
     `
     render(){
@@ -251,30 +277,32 @@ export class MyGrid extends LitElement{
         <script type="module" src="/src/js/components/cartCounter.js"></script>
         <script type="module" src="/src/js/components/cart.js"></script>
         <link rel="stylesheet" href="../../css/style.css">
-        <div class="header">
-            <div class="toggle__menu" id="toggle__menu">
-                <i class='bx bx-menu' id="rayas"></i>
+        <div class="body__container">
+            <div class="header">
+                <div class="toggle__menu" id="toggle__menu">
+                    <i class='bx bx-menu' id="rayas"></i>
+                </div>
+                <h2 class="header__title">CampusShop</h2>
+                <nav class="header__nav" id="header__nav">
+                    <my-header></my-header>
+                </nav>
+                <div class="header__carrito">
+                    <cart-counter></cart-counter>
+                </div>
+                <div class="header__copy">
+                    <i class='bx bx-copyright'></i>
+                    <p>2023 Juan</p>
+                </div>
             </div>
-            <h2 class="header__title">CampusShop</h2>
-            <nav class="header__nav" id="header__nav">
-                <my-header></my-header>
-            </nav>
-            <div class="header__carrito">
-                <cart-counter></cart-counter>
-            </div>
-            <div class="header__copy">
-                <i class='bx bx-copyright'></i>
-                <p>2023 Juan</p>
-            </div>
+            
+            <main id="main">
+                <h2>${this.title}</h2>
+                <div class="main__list">
+                    ${this.section === "carrito" ? html`<my-cart></my-cart>` : html`<product-item></product-item>`}
+                    
+                </div>
+            </main>
         </div>
-        
-        <main id="main">
-            <h2>${this.title}</h2>
-            <div class="main__list">
-                ${this.section === "carrito" ? html`<my-cart></my-cart>` : html`<product-item></product-item>`}
-                
-            </div>
-        </main>
         `
     }
 }

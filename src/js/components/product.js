@@ -29,6 +29,7 @@ export class Product extends LitElement{
 
     static styles = css`
     .product__item{
+        width: 45%;
         border-radius: 15px;
         transition: all 0.3s;
     
@@ -93,6 +94,7 @@ export class Product extends LitElement{
             transform: scale(1.05);
         }
         .product__item{
+            width: 22.5%;
             border-radius: 15px;
             transition: all 0.3s;
         
@@ -139,7 +141,7 @@ export class Product extends LitElement{
             }
         }
         return html`
-        ${console.log(this.products)}
+        ${console.log(filteredProducts)}
         ${this.section !== "carrito" ? html`
             ${filteredProducts.map(val=> html`
             <div class="product__item">
