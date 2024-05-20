@@ -151,7 +151,7 @@ export class Cart extends LitElement{
                     </div>
                     <div class="item__info__two">
                         <p>Cantidad</p>
-                        <p>2</p>
+                        <p>${val.cantidad}</p>
                     </div>
                     <div class="item__info__three">
                         <p>Precio</p>
@@ -159,7 +159,7 @@ export class Cart extends LitElement{
                     </div>
                     <div class="item__info__four">
                         <p>Subtotal</p>
-                        <p>$300.000</p>
+                        <p>$${val.subtotal}</p>
                     </div>
                     <i class='bx bxs-trash-alt' id='bx_boton'></i>
                 </div>

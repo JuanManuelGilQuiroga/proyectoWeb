@@ -1,16 +1,16 @@
 import { LitElement,html,css } from "lit";
-import { getData, getAllProducts, postProducts } from "./data";
+import { getData, getAllProducts, postProducts, getDataCarrito } from "./data";
 
 export class Product extends LitElement{
     static properties = {
-        data: { type: Object},
+        dataCarrito: { type: Array},
         products: { type: Array },
         section: { type: String }
     }   
     constructor(){
         super();
         this.products = [];
-        this.data = {};
+        this.dataCarrito = [];
         this.section = localStorage.getItem("section")
     }
 
@@ -19,20 +19,33 @@ export class Product extends LitElement{
         this.requestUpdate()
     }
 
-    async getData(){
-        this.data = await getData();
+    async getDataCarrito(){
+        this.dataCarrito = await getDataCarrito();
     }
 
     connectedCallback() {
         super.connectedCallback();
         this.getProducts();
-        this.getData()
+        this.getDataCarrito()
     }
 
     addToCart(item){
         //AQUI ES LA FUNCION CON LA CUAL SE VA A SUBIR EL PRODUCTO AL CARRITO
-        this.data.carrito.push(item)
-        postProducts(this.data)
+        let { precio } = item;
+        let cantidad = 1;
+        let subtotal = cantidad*precio;
+        let exists = this.dataCarrito.some(product => product.id === item.id);
+        if(exists){
+            let index = this.dataCarrito.findIndex(product => product.id === item.id);
+            this.dataCarrito[index].cantidad += 1;
+            this.dataCarrito[index].subtotal = this.dataCarrito[index].cantidad*precio;
+            postProducts(this.dataCarrito[index])
+        }else{
+            let productoCarrito = {...item, cantidad, subtotal }
+            postProducts(productoCarrito)
+
+        }
+        //this.dataCarrito.push(item)
 
     }
 
@@ -150,7 +163,7 @@ export class Product extends LitElement{
             }
         }
         return html`
-        ${console.log(this.data)}
+        ${console.log(this.dataCarrito)}
         ${this.section !== "carrito" ? html`
             ${filteredProducts.map(val=> html`
             <div class="product__item">

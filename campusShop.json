@@ -1,154 +1,170 @@
 {
-    "abrigo": [
-        {
-            "nombre": "Black-wash hoodie",
-            "imagen": "https://www.youngla.com/cdn/shop/files/551_black-wash_001_12_12_floor_900x.jpg?v=1701976758",
-            "precio": 93900,
-            "producto": "ropa",
-            "categoria": "abrigo",
-            "id": 1
-        },
-        {
-            "nombre": "Charcoal hoodie",
-            "imagen": "https://www.youngla.com/cdn/shop/files/5092_charcoal_001_03_26_floor_900x.jpg?v=1710202252",
-            "precio": 93900,
-            "producto": "ropa",
-            "categoria": "abrigo",
-            "id": 2
-        },
-        {
-            "nombre": "Teal hoodie",
-            "imagen": "https://www.youngla.com/cdn/shop/files/5093_teal_001_03_26_floor_900x.jpg?v=1711564737",
-            "precio": 93900,
-            "producto": "ropa",
-            "categoria": "abrigo",
-            "id": 3
-        },
-        {
-            "nombre": "Off-white hoodie",
-            "imagen": "https://www.youngla.com/cdn/shop/files/5105_off-white_001_03_05_floor_2c4f4ec5-1742-4305-8baa-1eee7fcc45a4_900x.jpg?v=1709165806",
-            "precio": 102000,
-            "producto": "ropa",
-            "categoria": "abrigo",
-            "id": 4
-        },
-        {
-            "nombre": "Green hoodie",
-            "imagen": "https://www.youngla.com/cdn/shop/files/5066_teal_001_02_22_floor_fa634f6a-68b4-4815-b514-5dec0243308c_900x.jpg?v=1708628720",
-            "precio": 77900,
-            "producto": "ropa",
-            "categoria": "abrigo",
-            "id": 5
-        }
-    ],
-    "camiseta":[
-        {
-            "nombre": "Black-wash t-shirt",
-            "imagen": "https://www.youngla.com/cdn/shop/files/4075_black-wash_001_02_22_floor_3e09e14c-1af8-4dfe-a7c3-5524b06b6ffc_1000x.jpg?v=1708022218",
-            "precio": 38000,
-            "producto": "ropa",
-            "categoria": "camiseta",
-            "id": 1
-        },
-        {
-            "nombre": "Black t-shirt",
-            "imagen": "https://www.youngla.com/cdn/shop/files/4116_black_001_03_05_floor_6a9b0141-9eb1-4000-8962-5709f2eb5dd7_900x.jpg?v=1709074501",
-            "precio": 26255,
-            "producto": "ropa",
-            "categoria": "camiseta",
-            "id": 2
-        },
-        {
-            "nombre": "Off-white t-shirt",
-            "imagen": "https://www.youngla.com/cdn/shop/files/4043_off-white_001_03_05_floor_3a2abba2-84d9-4af3-ab8e-8b66931c1151_900x.jpg?v=1709165618",
-            "precio": 29900,
-            "producto": "ropa",
-            "categoria": "camiseta",
-            "id": 3
-        },
-        {
-            "nombre": "Brown t-shirt",
-            "imagen": "https://www.youngla.com/cdn/shop/files/462_brown_001_03_05_floor_900x.jpg?v=1709610625",
-            "precio": 32850,
-            "producto": "ropa",
-            "categoria": "camiseta",
-            "id": 4
-        },
-        {
-            "nombre": "Burgundy t-shirt",
-            "imagen": "https://www.youngla.com/cdn/shop/files/4017_burgundy-wash_001_04_23_floor_900x.jpg?v=1713892040",
-            "precio": 29900,
-            "producto": "ropa",
-            "categoria": "camiseta",
-            "id": 5
-        }
-    ],
-    "pantalon":[
-        {
-            "nombre": "Off-white jogger",
-            "imagen": "https://www.youngla.com/cdn/shop/files/2006_off-white_001_03_05_floor_76b42d5d-66d0-490b-a0f0-f360bef76f1f_900x.jpg?v=1709165367",
-            "precio": 58900,
-            "producto": "ropa",
-            "categoria": "pantalon",
-            "id": 1
-        },
-        {
-            "nombre": "Purple-wash jogger",
-            "imagen": "https://www.youngla.com/cdn/shop/files/229_purple-wash_001_02_22_floor_2a884f4d-d3d7-4cf9-a552-a9aea8450bef_900x.jpg?v=1708132887",
-            "precio": 104405,
-            "producto": "ropa",
-            "categoria": "pantalon",
-            "id": 2
-        },
-        {
-            "nombre": "Black jogger",
-            "imagen": "https://www.youngla.com/cdn/shop/files/267_black_001_01_30_floor_900x.jpg?v=1706643310",
-            "precio": 104500,
-            "producto": "ropa",
-            "categoria": "pantalon",
-            "id": 3
-        },
-        {
-            "nombre": "Brown jogger",
-            "imagen": "https://www.youngla.com/cdn/shop/files/230_brown_001_01_30_floor_900x.jpg?v=1706643767",
-            "precio": 61750,
-            "producto": "ropa",
-            "categoria": "pantalon",
-            "id": 4
-        },
-        {
-            "nombre": "Black-wash jogger",
-            "imagen": "https://www.youngla.com/cdn/shop/files/2022_black-wash_001_02_08_floor_1ad6855f-38e2-4d3a-98c6-0c5866cd5ce5_900x.jpg?v=1707420896",
-            "precio": 89990,
-            "producto": "ropa",
-            "categoria": "pantalon",
-            "id": 5
-        }
-    ],
-    "carrito":[
-        {
-            "nombre": "Teal hoodie",
-            "imagen": "https://www.youngla.com/cdn/shop/files/5093_teal_001_03_26_floor_900x.jpg?v=1711564737",
-            "precio": 93900,
-            "producto": "ropa",
-            "categoria": "abrigo",
-            "id": 3
-        },
-        {
-            "nombre": "Off-white jogger",
-            "imagen": "https://www.youngla.com/cdn/shop/files/2006_off-white_001_03_05_floor_76b42d5d-66d0-490b-a0f0-f360bef76f1f_900x.jpg?v=1709165367",
-            "precio": 58900,
-            "producto": "ropa",
-            "categoria": "pantalon",
-            "id": 1
-        },
-        {
-            "nombre": "Brown t-shirt",
-            "imagen": "https://www.youngla.com/cdn/shop/files/462_brown_001_03_05_floor_900x.jpg?v=1709610625",
-            "precio": 32850,
-            "producto": "ropa",
-            "categoria": "camiseta",
-            "id": 4
-        }
-    ]
+  "abrigo": [
+    {
+      "nombre": "Black-wash hoodie",
+      "imagen": "https://www.youngla.com/cdn/shop/files/551_black-wash_001_12_12_floor_900x.jpg?v=1701976758",
+      "precio": 93900,
+      "producto": "ropa",
+      "categoria": "abrigo",
+      "id": "abrigo1"
+    },
+    {
+      "nombre": "Charcoal hoodie",
+      "imagen": "https://www.youngla.com/cdn/shop/files/5092_charcoal_001_03_26_floor_900x.jpg?v=1710202252",
+      "precio": 93900,
+      "producto": "ropa",
+      "categoria": "abrigo",
+      "id": "abrigo2"
+    },
+    {
+      "nombre": "Teal hoodie",
+      "imagen": "https://www.youngla.com/cdn/shop/files/5093_teal_001_03_26_floor_900x.jpg?v=1711564737",
+      "precio": 93900,
+      "producto": "ropa",
+      "categoria": "abrigo",
+      "id": "abrigo3"
+    },
+    {
+      "nombre": "Off-white hoodie",
+      "imagen": "https://www.youngla.com/cdn/shop/files/5105_off-white_001_03_05_floor_2c4f4ec5-1742-4305-8baa-1eee7fcc45a4_900x.jpg?v=1709165806",
+      "precio": 102000,
+      "producto": "ropa",
+      "categoria": "abrigo",
+      "id": "abrigo4"
+    },
+    {
+      "nombre": "Green hoodie",
+      "imagen": "https://www.youngla.com/cdn/shop/files/5066_teal_001_02_22_floor_fa634f6a-68b4-4815-b514-5dec0243308c_900x.jpg?v=1708628720",
+      "precio": 77900,
+      "producto": "ropa",
+      "categoria": "abrigo",
+      "id": "abrigo5"
+    }
+  ],
+  "camiseta": [
+    {
+      "nombre": "Black-wash t-shirt",
+      "imagen": "https://www.youngla.com/cdn/shop/files/4075_black-wash_001_02_22_floor_3e09e14c-1af8-4dfe-a7c3-5524b06b6ffc_1000x.jpg?v=1708022218",
+      "precio": 38000,
+      "producto": "ropa",
+      "categoria": "camiseta",
+      "id": "camiseta1"
+    },
+    {
+      "nombre": "Black t-shirt",
+      "imagen": "https://www.youngla.com/cdn/shop/files/4116_black_001_03_05_floor_6a9b0141-9eb1-4000-8962-5709f2eb5dd7_900x.jpg?v=1709074501",
+      "precio": 26255,
+      "producto": "ropa",
+      "categoria": "camiseta",
+      "id": "camiseta2"
+    },
+    {
+      "nombre": "Off-white t-shirt",
+      "imagen": "https://www.youngla.com/cdn/shop/files/4043_off-white_001_03_05_floor_3a2abba2-84d9-4af3-ab8e-8b66931c1151_900x.jpg?v=1709165618",
+      "precio": 29900,
+      "producto": "ropa",
+      "categoria": "camiseta",
+      "id": "camiseta3"
+    },
+    {
+      "nombre": "Brown t-shirt",
+      "imagen": "https://www.youngla.com/cdn/shop/files/462_brown_001_03_05_floor_900x.jpg?v=1709610625",
+      "precio": 32850,
+      "producto": "ropa",
+      "categoria": "camiseta",
+      "id": "camiseta4"
+    },
+    {
+      "nombre": "Burgundy t-shirt",
+      "imagen": "https://www.youngla.com/cdn/shop/files/4017_burgundy-wash_001_04_23_floor_900x.jpg?v=1713892040",
+      "precio": 29900,
+      "producto": "ropa",
+      "categoria": "camiseta",
+      "id": "camiseta5"
+    }
+  ],
+  "pantalon": [
+    {
+      "nombre": "Off-white jogger",
+      "imagen": "https://www.youngla.com/cdn/shop/files/2006_off-white_001_03_05_floor_76b42d5d-66d0-490b-a0f0-f360bef76f1f_900x.jpg?v=1709165367",
+      "precio": 58900,
+      "producto": "ropa",
+      "categoria": "pantalon",
+      "id": "pantalon1"
+    },
+    {
+      "nombre": "Purple-wash jogger",
+      "imagen": "https://www.youngla.com/cdn/shop/files/229_purple-wash_001_02_22_floor_2a884f4d-d3d7-4cf9-a552-a9aea8450bef_900x.jpg?v=1708132887",
+      "precio": 104405,
+      "producto": "ropa",
+      "categoria": "pantalon",
+      "id": "pantalon2"
+    },
+    {
+      "nombre": "Black jogger",
+      "imagen": "https://www.youngla.com/cdn/shop/files/267_black_001_01_30_floor_900x.jpg?v=1706643310",
+      "precio": 104500,
+      "producto": "ropa",
+      "categoria": "pantalon",
+      "id": "pantalon3"
+    },
+    {
+      "nombre": "Brown jogger",
+      "imagen": "https://www.youngla.com/cdn/shop/files/230_brown_001_01_30_floor_900x.jpg?v=1706643767",
+      "precio": 61750,
+      "producto": "ropa",
+      "categoria": "pantalon",
+      "id": "pantalon4"
+    },
+    {
+      "nombre": "Black-wash jogger",
+      "imagen": "https://www.youngla.com/cdn/shop/files/2022_black-wash_001_02_08_floor_1ad6855f-38e2-4d3a-98c6-0c5866cd5ce5_900x.jpg?v=1707420896",
+      "precio": 89990,
+      "producto": "ropa",
+      "categoria": "pantalon",
+      "id": "pantalon5"
+    }
+  ],
+  "carrito": [
+    {
+      "nombre": "Teal hoodie",
+      "imagen": "https://www.youngla.com/cdn/shop/files/5093_teal_001_03_26_floor_900x.jpg?v=1711564737",
+      "precio": 93900,
+      "producto": "ropa",
+      "categoria": "abrigo",
+      "id": "abrigo3",
+      "cantidad": 1,
+      "subtotal": 93900
+    },
+    {
+      "nombre": "Off-white jogger",
+      "imagen": "https://www.youngla.com/cdn/shop/files/2006_off-white_001_03_05_floor_76b42d5d-66d0-490b-a0f0-f360bef76f1f_900x.jpg?v=1709165367",
+      "precio": 58900,
+      "producto": "ropa",
+      "categoria": "pantalon",
+      "id": "pantalon1",
+      "cantidad": 1,
+      "subtotal": 58900
+    },
+    {
+      "nombre": "Brown t-shirt",
+      "imagen": "https://www.youngla.com/cdn/shop/files/462_brown_001_03_05_floor_900x.jpg?v=1709610625",
+      "precio": 32850,
+      "producto": "ropa",
+      "categoria": "camiseta",
+      "id": "camiseta4",
+      "cantidad": 1,
+      "subtotal": 32850
+    },
+    {
+      "id": "abrigo2",
+      "nombre": "Charcoal hoodie",
+      "imagen": "https://www.youngla.com/cdn/shop/files/5092_charcoal_001_03_26_floor_900x.jpg?v=1710202252",
+      "precio": 93900,
+      "producto": "ropa",
+      "categoria": "abrigo",
+      "cantidad": 1,
+      "subtotal": 93900
+    }
+  ]
 }

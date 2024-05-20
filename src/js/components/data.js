@@ -4,22 +4,24 @@ export const getData = async () => {
     return data
 }
 export const getDataHoodies = async () => {
-    let res = await fetch("http://localhost:5500/campusShop.json");
+    let res = await fetch("http://localhost:5501/abrigo");
     let data = await res.json();
-    let dataHoodies = data["abrigo"]
-    return dataHoodies
+    return data
 }
 export const getDataTShirts = async () => {
-    let res = await fetch("http://localhost:5500/campusShop.json");
+    let res = await fetch("http://localhost:5501/camiseta");
     let data = await res.json();
-    let dataTShirts = data["camiseta"]
-    return dataTShirts
+    return data
 }
 export const getDataJoggers = async () => {
-    let res = await fetch("http://localhost:5500/campusShop.json");
+    let res = await fetch("http://localhost:5501/pantalon");
     let data = await res.json();
-    let dataJoggers = data["pantalon"]
-    return dataJoggers
+    return data
+}
+export const getDataCarrito = async () => {
+    let res = await fetch("http://localhost:5501/carrito");
+    let data = await res.json();
+    return data
 }
 export const getAllProducts = async () => {
     let dataHoodies = await getDataHoodies();
@@ -36,6 +38,6 @@ export const postProducts = async (product) => {
         method: "POST",
         body: JSON.stringify(product)
     }
-    let res = await fetch("http://localhost:5500/campusShop.json", config);
+    let res = await fetch("http://localhost:5501/carrito", config);
     let data = await res.json();
 }
