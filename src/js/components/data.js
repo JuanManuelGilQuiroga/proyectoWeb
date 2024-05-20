@@ -41,14 +41,16 @@ export const postProducts = async (product) => {
     let res = await fetch("http://localhost:5501/carrito", config);
     let data = await res.json();
 }
-export const putProducts = async (newProduct) => {
+export const patchProducts = async (id, newAmount, newSubtotal) => {
     let config = {
         headers: {
             "content-type": "application/json"
         },
-        method: "PUT",
-        body: JSON.stringify(newProduct)
+        method: "PATCH",
+        body: JSON.stringify({
+            "cantidad": newAmount,
+            "subtotal": newSubtotal
+        })
     }
-    let res = await fetch("http://localhost:5501/carrito", config);
-    let data = await res.json();
+    let res = await fetch(`http://localhost:5501/carrito/${id}`, config);
 }

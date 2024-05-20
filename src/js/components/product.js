@@ -1,5 +1,5 @@
 import { LitElement,html,css } from "lit";
-import { getData, getAllProducts, postProducts, getDataCarrito, putProducts } from "./data";
+import { getData, getAllProducts, postProducts, getDataCarrito, patchProducts } from "./data";
 
 export class Product extends LitElement{
     static properties = {
@@ -31,7 +31,7 @@ export class Product extends LitElement{
 
     addToCart(item){
         //AQUI ES LA FUNCION CON LA CUAL SE VA A SUBIR EL PRODUCTO AL CARRITO
-        let { precio } = item;
+        let { precio, id } = item;
         let cantidad = 1;
         let subtotal = cantidad*precio;
         let exists = this.dataCarrito.some(product => product.id === item.id);
@@ -41,12 +41,12 @@ export class Product extends LitElement{
             let cantidadNueva = this.dataCarrito[index].cantidad
             this.dataCarrito[index].subtotal = this.dataCarrito[index].cantidad*precio;
             let subtotalNuevo = this.dataCarrito[index].subtotal
-            let productoCarrito = {...item, cantidadNueva, subtotalNuevo}
+            /*let productoCarrito = {...item, cantidadNueva, subtotalNuevo}
             let dataCarritoNuevo = this.dataCarrito.map(producto =>{
                 if(producto.id === productoCarrito.id) return productoCarrito;
                 return producto
-            })
-            putProducts(dataCarritoNuevo)
+            })*/
+            patchProducts(id, cantidadNueva, subtotalNuevo)
         }else{
             let productoCarrito = {...item, cantidad, subtotal }
             postProducts(productoCarrito)

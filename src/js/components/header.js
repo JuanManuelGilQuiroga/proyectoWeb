@@ -41,6 +41,7 @@ export class Header extends LitElement{
     changeSection(sectionChanged){
         this.section = sectionChanged;
         localStorage.setItem("section", this.section)
+        location.href="/"
     }
 
     render(){
