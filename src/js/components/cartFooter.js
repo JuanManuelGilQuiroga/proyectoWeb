@@ -2,12 +2,13 @@ import { LitElement,html,css } from "lit";
 import { getDataCarrito } from "./data";
 
 export class CartFooter extends LitElement{
-    /*static properties = {
-
-    }*/
+    static properties = {
+        total: { type: Number },
+    }
 
     constructor(){
-        super();
+        super();    
+        this.total = 0
     }
 
     static styles = css`
@@ -112,14 +113,31 @@ export class CartFooter extends LitElement{
     }
     
     `
+
+    connectedCallback() {
+        super.connectedCallback();
+        this.getTotal()
+    }
+
+    async getTotal(){
+        let data = await getDataCarrito();
+        let cont = 0;
+        data.forEach(product => {
+            cont += product.subtotal
+        })
+        this.total = cont;
+        console.log(data)
+    }   
+
     render(){
         return html`
+        ${console.log(this.total)}
         <div class="carrito__main__footer">
             <button class="button__vaciar" id="button__vaciar"><p>Vaciar Carrito</p></button>
             <div class="main__footer__div" id="total">
                 <div class="total">
                     <p>Total</p>
-                    <p id="total__carrito">$530000</p>
+                    <p id="total__carrito">$${this.total}</p>
                 </div>
                 <button class="button__comprar" id="button__comprar"><p>Comprar Ahora</p></button>
             </div>

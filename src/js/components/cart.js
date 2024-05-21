@@ -1,5 +1,5 @@
 import { LitElement,html,css } from "lit";
-import { getData } from "./data";
+import { getData, deleteProducts, patchProducts } from "./data";
 
 export class Cart extends LitElement{
     static properties = {
@@ -19,6 +19,25 @@ export class Cart extends LitElement{
     connectedCallback() {
         super.connectedCallback();
         this.getProductsCart()
+    }
+
+    removeToCart(item){
+        //AQUI ES LA FUNCION CON LA CUAL SE VA A SUBIR EL PRODUCTO AL CARRITO
+        let { precio, id, cantidad } = item;
+        //let exists = this.products.some(product => product.id === item.id);
+        if(cantidad>1){
+            let index = this.products.findIndex(product => product.id === item.id);
+            this.products[index].cantidad -= 1;
+            let cantidadNueva = this.products[index].cantidad
+            this.products[index].subtotal = this.products[index].cantidad*precio;
+            let subtotalNuevo = this.products[index].subtotal
+            patchProducts(id, cantidadNueva, subtotalNuevo)
+        }else{
+            deleteProducts(id)
+
+        }
+        //this.products.push(item)
+
     }
 
     static styles = css`
@@ -161,7 +180,7 @@ export class Cart extends LitElement{
                         <p>Subtotal</p>
                         <p>$${val.subtotal}</p>
                     </div>
-                    <i class='bx bxs-trash-alt' id='bx_boton'></i>
+                    <i class='bx bxs-trash-alt' id='bx_boton' @click=${()=>this.removeToCart(val)}></i>
                 </div>
             </div>
             `)}

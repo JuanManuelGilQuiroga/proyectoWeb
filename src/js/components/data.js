@@ -54,3 +54,12 @@ export const patchProducts = async (id, newAmount, newSubtotal) => {
     }
     let res = await fetch(`http://localhost:5501/carrito/${id}`, config);
 }
+export const deleteProducts = async (id) => {
+    let config = {
+        headers: {
+            "content-type": "application/json"
+        },
+        method: "DELETE"
+    }
+    let res = await fetch(`http://localhost:5501/carrito/${id}`, config);
+}

@@ -127,26 +127,6 @@
   ],
   "carrito": [
     {
-      "id": "abrigo1",
-      "nombre": "Black-wash hoodie",
-      "imagen": "https://www.youngla.com/cdn/shop/files/551_black-wash_001_12_12_floor_900x.jpg?v=1701976758",
-      "precio": 93900,
-      "producto": "ropa",
-      "categoria": "abrigo",
-      "cantidad": 1,
-      "subtotal": 93900
-    },
-    {
-      "id": "abrigo2",
-      "nombre": "Charcoal hoodie",
-      "imagen": "https://www.youngla.com/cdn/shop/files/5092_charcoal_001_03_26_floor_900x.jpg?v=1710202252",
-      "precio": 93900,
-      "producto": "ropa",
-      "categoria": "abrigo",
-      "cantidad": 1,
-      "subtotal": 93900
-    },
-    {
       "id": "camiseta3",
       "nombre": "Off-white t-shirt",
       "imagen": "https://www.youngla.com/cdn/shop/files/4043_off-white_001_03_05_floor_3a2abba2-84d9-4af3-ab8e-8b66931c1151_900x.jpg?v=1709165618",
@@ -155,6 +135,16 @@
       "categoria": "camiseta",
       "cantidad": 1,
       "subtotal": 29900
+    },
+    {
+      "id": "abrigo2",
+      "nombre": "Charcoal hoodie",
+      "imagen": "https://www.youngla.com/cdn/shop/files/5092_charcoal_001_03_26_floor_900x.jpg?v=1710202252",
+      "precio": 93900,
+      "producto": "ropa",
+      "categoria": "abrigo",
+      "cantidad": 2,
+      "subtotal": 187800
     }
   ]
 }
