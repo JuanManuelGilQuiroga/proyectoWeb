@@ -57,6 +57,17 @@ export class Product extends LitElement{
     }
 
     static styles = css`
+    :root{
+        --color-white: #fff;
+        --color-grey: #efefef;
+        --color-black: #1c1b1b;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "NunitoSans-Medium";
+    }
     .product__item{
         width: 45%;
         border-radius: 15px;
@@ -157,6 +168,19 @@ export class Product extends LitElement{
             .item__info{
                 font-size: .5em;
             }
+        }
+    }
+    @keyframes reveal{
+        from{
+            scale: .8;
+            opacity: 0;
+            translate: 0 100px;
+        }
+    
+        to{
+            scale: 1;
+            translate: 0 0;
+            opacity: 1;
         }
     }
     ` 

@@ -1,4 +1,9 @@
 import { LitElement,html,css } from "lit";
+import { CartFooter } from "./cartFooter";
+import { Cart } from "./cart";
+import { CartCounter } from "./cartCounter";
+import { Header } from "./header";
+import { Product } from "./product";
 
 export class MyGrid extends LitElement{
     static properties = {
@@ -22,6 +27,11 @@ export class MyGrid extends LitElement{
         }else if(this.section === "carrito"){
             this.title = "CARRITO"
         }
+    }
+
+    connectedCallback(){
+        super.connectedCallback();
+        this.changeSectionTitle();
     }
     static styles = css`
     *{
@@ -57,26 +67,6 @@ export class MyGrid extends LitElement{
         padding: 15px;
         display: flex;
         flex-wrap: wrap;
-        /*display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(15, 1fr);
-        grid-template-areas: 
-        "producto1"
-        "producto2"
-        "producto3"
-        "producto4"
-        "producto5"
-        "producto6"
-        "producto7"
-        "producto8"
-        "producto9"
-        "producto10"
-        "producto11"
-        "producto12"
-        "producto13"
-        "producto14"
-        "producto15";
-        grid-gap: 15px;*/
     }
     a{
         text-decoration: none;
@@ -122,7 +112,10 @@ export class MyGrid extends LitElement{
             text-shadow: 0px 0px 20px var(--color-white);
         }
     }
+    .header__carrito{
+        display: flex;
 
+    }
     .header__carrito i{
         font-size: 2em;
         color: var(--color-white);
@@ -158,7 +151,7 @@ export class MyGrid extends LitElement{
         flex-direction: column;
         justify-content: space-between;
     }
-    main h2{
+    .title__main{
         margin: 5%;
         font-family: "Staatliches";
         color: var(--color-black);
@@ -241,7 +234,7 @@ export class MyGrid extends LitElement{
             place-self: center;
             border-radius: 30px;
         }
-        main h2{
+        .title__main{
             margin: 0;
             margin-left: 1.5%;
         }
@@ -259,24 +252,33 @@ export class MyGrid extends LitElement{
             flex-wrap: wrap;
             gap: 20px
         }
+        carrito__main__list{
+            height: 70vh;
+        }
+        my-header{
+            display: flex;
+            justify-content: start;
+        }
         my-cart{
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px
+            gap: 15px;
+            overflow-y: scroll
+        }
+        cart-counter{
+            width: 100%
+        }
+        cart-footer{
+            width: 100%
         }
     }
     `
     render(){
         return html`
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-        <script type="module" src="/src/js/components/product.js"></script>
-        <script type="module" src="/src/js/components/header.js"></script>
-        <script type="module" src="/src/js/components/cartCounter.js"></script>
-        <script type="module" src="/src/js/components/cart.js"></script>
-        <link rel="stylesheet" href="../../css/style.css">
         <div class="body__container">
             <div class="header">
                 <div class="toggle__menu" id="toggle__menu">
@@ -296,9 +298,10 @@ export class MyGrid extends LitElement{
             </div>
             
             <main id="main">
-                <h2>${this.title}</h2>
-                <div class="main__list">
-                    ${this.section === "carrito" ? html`<my-cart></my-cart>` : html`<product-item></product-item>`}
+                <h2 class="title__main">${this.title}</h2>
+                ${console.log(this.title)}
+                <div class="main__list carrito__main__list">
+                    ${this.section === "carrito" ? html`<my-cart></my-cart><cart-footer></cart-footer>` : html`<product-item></product-item>`}
                     
                 </div>
             </main>

@@ -9,7 +9,7 @@
 }
 @font-face {
     font-family: "NunitoSans-Bold";
-    src: url(/fonts/Nunito_Sans/NunitoSans_10pt-Bold.ttf);
+    src: url(../../public/fonts/Nunito_Sans/NunitoSans_10pt-Bold.ttf);
 }
 @font-face {
     font-family: "NunitoSans-SemiBold";

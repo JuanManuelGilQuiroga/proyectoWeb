@@ -12,6 +12,12 @@ export class Header extends LitElement{
     }
 
     static styles = css`
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "NunitoSans-Medium";
+    }
     a{
         text-decoration: none;
     }
@@ -34,6 +40,7 @@ export class Header extends LitElement{
     }
     @media screen and (min-width:760px){
         .header__menu{
+            width: 100%;
             align-items: start;
         }
     }

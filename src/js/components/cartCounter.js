@@ -32,8 +32,15 @@ export class CartCounter extends LitElement{
     }
 
     static styles = css`
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "NunitoSans-Medium";
+    }
     a{
         text-decoration: none;
+        color: var()
     }
     a:hover{
         cursor: pointer;
@@ -41,13 +48,24 @@ export class CartCounter extends LitElement{
     .carrito__info{
         display: none;
     }
+    i{
+        font-size: 2em;
+        color: var(--color-white);
+    }
     @media screen and (min-width:760px) {
+        .container__cart__counter{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
         .header a{
             transition: .2s;
         }
         .carrito__info{
             width: 75%;
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
         }
         .carrito__info a{
@@ -85,13 +103,13 @@ export class CartCounter extends LitElement{
 
     render(){
         return html`
-        ${console.log(this.section)}
-        ${console.log(this.count)}
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-        <a @click=${()=>this.changeSection("carrito")}><i class='bx bxs-cart'></i></a>
-        <div class="carrito__info">
-            <a @click=${()=>this.changeSection("carrito")} class="carrito__title">Carrito</a>
-            <button class="carrito__number" id="contador">${this.count}</button>
+        <div class="container__cart__counter">
+            <a @click=${()=>this.changeSection("carrito")}><i class='bx bxs-cart'></i></a>
+            <div class="carrito__info">
+                <a @click=${()=>this.changeSection("carrito")} class="carrito__title">Carrito</a>
+                <button class="carrito__number" id="contador">${this.count}</button>
+            </div>
         </div>
         `
     }
