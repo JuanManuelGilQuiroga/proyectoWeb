@@ -1,14 +1,16 @@
 import { LitElement,html,css } from "lit";
-import { getDataCarrito } from "./data";
+import { getDataCarrito, deleteProducts,putProducts } from "./data";
 
 export class CartFooter extends LitElement{
     static properties = {
         total: { type: Number },
+        dataCarrito: { type: Array }
     }
 
     constructor(){
         super();    
-        this.total = 0
+        this.total = 0;
+        this.dataCarrito = []
     }
 
     static styles = css`
@@ -116,34 +118,39 @@ export class CartFooter extends LitElement{
 
     connectedCallback() {
         super.connectedCallback();
-        this.getTotal()
+        this.getTotal();
+        this.clearCart()
     }
 
     async getTotal(){
-        let data = await getDataCarrito();
+        this.dataCarrito = await getDataCarrito();
         let cont = 0;
-        data.forEach(product => {
+        this.dataCarrito.forEach(product => {
             cont += product.subtotal
         })
         this.total = cont;
-        console.log(data)
+        console.log(this.dataCarrito)
     }   
+
+    async clearCart(){
+        let dataCart = [];
+        putProducts(dataCart)
+    }
 
     render(){
         return html`
-        ${console.log(this.total)}
+        ${console.log(this.dataCarrito)}
         <div class="carrito__main__footer">
-            <button class="button__vaciar" id="button__vaciar"><p>Vaciar Carrito</p></button>
+            <button class="button__vaciar" id="button__vaciar" @click${this.clearCart()}><p>Vaciar Carrito</p></button>
             <div class="main__footer__div" id="total">
                 <div class="total">
                     <p>Total</p>
                     <p id="total__carrito">$${this.total}</p>
                 </div>
-                <button class="button__comprar" id="button__comprar"><p>Comprar Ahora</p></button>
+                <button class="button__comprar" id="button__comprar" @click${this.clearCart()}><p>Comprar Ahora</p></button>
             </div>
         </div>
         `
     }
-
 }
 customElements.define("cart-footer", CartFooter);

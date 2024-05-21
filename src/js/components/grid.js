@@ -4,16 +4,19 @@ import { Cart } from "./cart";
 import { CartCounter } from "./cartCounter";
 import { Header } from "./header";
 import { Product } from "./product";
+import { getDataCarrito } from "./data";
 
 export class MyGrid extends LitElement{
     static properties = {
         section: { type: String },
+        carrito:  { type: Array },
         title: { type: String }
     }
     constructor(){
         super();
         this.section = localStorage.getItem("section");
-        this.title = ""
+        this.title = "";
+        this.carrito = [];
     }
     changeSectionTitle(){
         if(this.section === "ropa"){
@@ -32,7 +35,13 @@ export class MyGrid extends LitElement{
     connectedCallback(){
         super.connectedCallback();
         this.changeSectionTitle();
+        this.getCarrito()
     }
+
+    async getCarrito(){
+        this.carrito = await getDataCarrito();
+    }
+
     static styles = css`
     *{
         margin: 0;
@@ -299,10 +308,9 @@ export class MyGrid extends LitElement{
             
             <main id="main">
                 <h2 class="title__main">${this.title}</h2>
-                ${console.log(this.title)}
+                ${console.log(this.carrito)}
                 <div class="main__list carrito__main__list">
-                    ${this.section === "carrito" ? html`<my-cart></my-cart><cart-footer></cart-footer>` : html`<product-item></product-item>`}
-                    
+                    ${this.section === "carrito" ? html`${this.carrito.length > 0 ? html`<my-cart></my-cart><cart-footer></cart-footer>` :  html`<p class="eliminar__elemento carrito__vacio" id="carrito__vacio">Tu carrito esta vacio :(</p>`}` : html`<product-item></product-item>`}                  
                 </div>
             </main>
         </div>
