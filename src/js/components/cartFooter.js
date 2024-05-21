@@ -1,5 +1,5 @@
 import { LitElement,html,css } from "lit";
-import { getDataCarrito, deleteProducts,putProducts } from "./data";
+import { getDataCarrito, deleteProducts, putProducts } from "./data";
 
 export class CartFooter extends LitElement{
     static properties = {
@@ -119,7 +119,6 @@ export class CartFooter extends LitElement{
     connectedCallback() {
         super.connectedCallback();
         this.getTotal();
-        this.clearCart()
     }
 
     async getTotal(){
@@ -132,22 +131,25 @@ export class CartFooter extends LitElement{
         console.log(this.dataCarrito)
     }   
 
-    async clearCart(){
-        let dataCart = [];
-        putProducts(dataCart)
+    async clearCart(e){
+        let varDataCarrito = this.dataCarrito;
+        for(let val of varDataCarrito){
+            let res = await deleteProducts(val.id)
+            console.log(res)
+        }
+        location.href="/"
     }
-
     render(){
         return html`
         ${console.log(this.dataCarrito)}
         <div class="carrito__main__footer">
-            <button class="button__vaciar" id="button__vaciar" @click${this.clearCart()}><p>Vaciar Carrito</p></button>
+            <button class="button__vaciar" id="button__vaciar" @click="${this.clearCart}"><p>Vaciar Carrito</p></button>
             <div class="main__footer__div" id="total">
                 <div class="total">
                     <p>Total</p>
                     <p id="total__carrito">$${this.total}</p>
                 </div>
-                <button class="button__comprar" id="button__comprar" @click${this.clearCart()}><p>Comprar Ahora</p></button>
+                <button class="button__comprar" id="button__comprar" @click="${this.clearCart}"><p>Comprar Ahora</p></button>
             </div>
         </div>
         `

@@ -1,8 +1,3 @@
-export const getData = async () => {
-    let res = await fetch("http://localhost:5500/campusShop.json");
-    let data = await res.json();
-    return data
-}
 export const getDataHoodies = async () => {
     let res = await fetch("http://localhost:5501/abrigo");
     let data = await res.json();
@@ -53,6 +48,17 @@ export const patchProducts = async (id, newAmount, newSubtotal) => {
         })
     }
     let res = await fetch(`http://localhost:5501/carrito/${id}`, config);
+}
+export const putProducts = async (newCarrito) => {
+    let config = {
+        headers: {
+            "content-type": "application/json"
+        },
+        method: "PUT",
+        body: JSON.stringify([newCarrito])
+    }
+    let res = await fetch("http://localhost:5501/carrito", config);
+    return ("se ha limpiado")
 }
 export const deleteProducts = async (id) => {
     let config = {

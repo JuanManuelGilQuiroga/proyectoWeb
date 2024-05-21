@@ -1,5 +1,5 @@
 import { LitElement,html,css } from "lit";
-import { getData, deleteProducts, patchProducts } from "./data";
+import { getDataCarrito, deleteProducts, patchProducts } from "./data";
 
 export class Cart extends LitElement{
     static properties = {
@@ -8,12 +8,12 @@ export class Cart extends LitElement{
     }
     constructor(){
         super();
-        this.products = [];
+        this.getProductsCart;
         this.section = localStorage.getItem("section")
     }
     async getProductsCart(){
-        let data = await getData();
-        this.products = data.carrito
+        let data = await getDataCarrito();
+        this.products = data
         this.requestUpdate()
     }
     connectedCallback() {

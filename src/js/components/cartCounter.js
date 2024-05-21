@@ -1,5 +1,5 @@
 import { LitElement,html,css } from "lit";
-import { getData } from "./data";
+import { getDataCarrito } from "./data";
 
 export class CartCounter extends LitElement{
     static properties = {
@@ -10,7 +10,7 @@ export class CartCounter extends LitElement{
     constructor(){
         super();
         this.section = localStorage.getItem("section");
-        this.count = 0
+        this.getCartCount()
     }
 
     changeSection(sectionChanged){
@@ -20,9 +20,8 @@ export class CartCounter extends LitElement{
     }
 
     async getCartCount(){
-        let dataCart = await getData();
-        this.count = dataCart["carrito"].length;
-        console.log(this.count)
+        let dataCart = await getDataCarrito();
+        this.count = dataCart.length;
         
     }
 

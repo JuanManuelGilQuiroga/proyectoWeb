@@ -125,36 +125,5 @@
       "id": "pantalon5"
     }
   ],
-  "carrito": [
-    {
-      "id": "pantalon1",
-      "nombre": "Off-white jogger",
-      "imagen": "https://www.youngla.com/cdn/shop/files/2006_off-white_001_03_05_floor_76b42d5d-66d0-490b-a0f0-f360bef76f1f_900x.jpg?v=1709165367",
-      "precio": 58900,
-      "producto": "ropa",
-      "categoria": "pantalon",
-      "cantidad": 1,
-      "subtotal": 58900
-    },
-    {
-      "id": "pantalon3",
-      "nombre": "Black jogger",
-      "imagen": "https://www.youngla.com/cdn/shop/files/267_black_001_01_30_floor_900x.jpg?v=1706643310",
-      "precio": 104500,
-      "producto": "ropa",
-      "categoria": "pantalon",
-      "cantidad": 2,
-      "subtotal": 209000
-    },
-    {
-      "id": "pantalon2",
-      "nombre": "Purple-wash jogger",
-      "imagen": "https://www.youngla.com/cdn/shop/files/229_purple-wash_001_02_22_floor_2a884f4d-d3d7-4cf9-a552-a9aea8450bef_900x.jpg?v=1708132887",
-      "precio": 104405,
-      "producto": "ropa",
-      "categoria": "pantalon",
-      "cantidad": 1,
-      "subtotal": 104405
-    }
-  ]
+  "carrito": []
 }
