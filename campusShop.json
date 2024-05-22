@@ -125,5 +125,16 @@
       "id": "pantalon5"
     }
   ],
-  "carrito": []
+  "carrito": [
+    {
+      "id": "camiseta5",
+      "nombre": "Burgundy t-shirt",
+      "imagen": "https://www.youngla.com/cdn/shop/files/4017_burgundy-wash_001_04_23_floor_900x.jpg?v=1713892040",
+      "precio": 29900,
+      "producto": "ropa",
+      "categoria": "camiseta",
+      "cantidad": 1,
+      "subtotal": 29900
+    }
+  ]
 }

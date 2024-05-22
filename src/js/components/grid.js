@@ -5,18 +5,21 @@ import { CartCounter } from "./cartCounter";
 import { Header } from "./header";
 import { Product } from "./product";
 import { getDataCarrito } from "./data";
+import { ToggleMenu } from "./toggleMenu";
 
 export class MyGrid extends LitElement{
     static properties = {
         section: { type: String },
         carrito:  { type: Array },
-        title: { type: String }
+        title: { type: String },
+        show: { type: Array }
     }
     constructor(){
         super();
         this.section = localStorage.getItem("section");
         this.title = "";
         this.carrito = [];
+        this.show = sessionStorage.getItem("show")
     }
     changeSectionTitle(){
         if(this.section === "ropa"){
@@ -75,6 +78,7 @@ export class MyGrid extends LitElement{
         overflow-y: scroll;
         padding: 15px;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
     }
     a{
@@ -158,6 +162,7 @@ export class MyGrid extends LitElement{
         padding: 3%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
     }
     .title__main{
@@ -269,6 +274,7 @@ export class MyGrid extends LitElement{
             justify-content: start;
         }
         my-cart{
+            padding: 0 5%;
             width: 100%;
             height: 100%;
             display: flex;
@@ -284,14 +290,18 @@ export class MyGrid extends LitElement{
             width: 100%
         }
     }
+    .main__z__index{
+        z-index: -10;
+    }
     `
     render(){
         return html`
+        ${console.log(this.show)}
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <div class="body__container">
             <div class="header">
                 <div class="toggle__menu" id="toggle__menu">
-                    <i class='bx bx-menu' id="rayas"></i>
+                    <toggle-menu></toggle-menu>
                 </div>
                 <h2 class="header__title">CampusShop</h2>
                 <nav class="header__nav" id="header__nav">
@@ -306,7 +316,7 @@ export class MyGrid extends LitElement{
                 </div>
             </div>
             
-            <main id="main">
+            <main id="main" ${(localStorage.getItem("show") === "main__z__index") ? html`class="main__z__index"` : ""}>
                 <h2 class="title__main">${this.title}</h2>
                 ${console.log(this.carrito)}
                 <div class="main__list carrito__main__list">

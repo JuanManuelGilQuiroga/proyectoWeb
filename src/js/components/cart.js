@@ -42,10 +42,16 @@ export class Cart extends LitElement{
     }
 
     static styles = css`
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "NunitoSans-Medium";
+    }
     .carrito__item{
         margin: 1%;
         width: 100%;
-        height: 15vh;
+        height: 18vh;
         border-radius: 15px;
         transition: all 0.3s;
         background: var(--color-black);
@@ -56,6 +62,12 @@ export class Cart extends LitElement{
         animation: reveal linear both;
         animation-timeline: view();
         animation-range: entry 10% cover 23%;
+        overflow-y: scroll
+    }
+
+    ::-webkit-scrollbar{
+        width: 0;
+
     }
     .carrito__item:active{
         transform: scale(1.03);
@@ -160,7 +172,7 @@ export class Cart extends LitElement{
         ${this.section === "carrito" ? html`
             ${this.products.map(val => html`
             <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-            <div class="carrito__item__2 carrito__item" id="nono">
+            <div class="carrito__item" id="nono">
                 <div class="carrito__item__img">
                     <img src=${val.imagen} alt="">
                 </div>
