@@ -36,6 +36,7 @@ export class Cart extends LitElement{
             deleteProducts(id)
 
         }
+        location.href = "/"
         //this.products.push(item)
 
     }

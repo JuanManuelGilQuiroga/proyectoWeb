@@ -47,12 +47,14 @@ export class Product extends LitElement{
                 if(producto.id === productoCarrito.id) return productoCarrito;
                 return producto
             })*/
-            patchProducts(id, cantidadNueva, subtotalNuevo)
+            patchProducts(id, cantidadNueva, subtotalNuevo);
+            console.log(this.dataCarrito)
         }else{
             let productoCarrito = {...item, cantidad, subtotal }
             postProducts(productoCarrito)
-
+            
         }
+        location.href="/"
         //this.dataCarrito.push(item)
 
     }
