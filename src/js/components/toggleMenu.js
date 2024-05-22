@@ -2,26 +2,28 @@ import { LitElement,html,css } from "lit";
 
 export class ToggleMenu extends LitElement{
     static properties = {
-        show: { type: Array },
+        show: { type: String },
         section: { type: String }
     }
     constructor(){
         super(),
         this.show = "",
-        this.section = localStorage.getItem("section")
-       // this.show = localStorage.getItem("show") || ""
+        this.section = localStorage.getItem("section") || localStorage.setItem("section","ropa");
+        //this.show = localStorage.getItem("show") || ""
     }
 
     mostrarMenu(e){
         this.show = "header__nav__show"
-        localStorage.setItem("show", "header__nav__show")
+        localStorage.setItem("show", "main__z__index")
+        document.body.children[0].shadowRoot.querySelector(".main__list").innerHTML = "bbb<product-item></product-item>"
     }
 
     changeSection(sectionChanged){
         this.section = sectionChanged;
         localStorage.setItem("section", this.section)
-        localStorage.setItem("show", "")
-        location.href="/"
+        localStorage.setItem("show", "0")
+        document.body.children[0].shadowRoot.querySelector(".main__list").innerHTML = "aaa<product-item></product-item>"
+        location.href = "/"
     }
 
     static styles = css`
@@ -64,13 +66,13 @@ export class ToggleMenu extends LitElement{
         font-family: "Staatliches";
     }
     `
-
+id="header__nav"
     render(){
         return html`
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <i class='bx bx-menu' id="rayas" @click="${this.mostrarMenu}"></i>
 
-        <nav class="header__nav ${this.show}" id="header__nav">
+        <nav class="header__nav ${this.show}" >
             <ul class="header__menu" id="header__menu">
                 <li><a class="menu__item" id="link__1" @click=${()=>this.changeSection("ropa")}><i class='bx bxs-star'></i>Todos los productos</a></li>
                 <li><a class="menu__item" id="link__2" @click=${()=>this.changeSection("abrigo")}><i class='bx bxs-star'></i>Abrigos</a></li>

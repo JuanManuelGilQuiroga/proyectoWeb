@@ -301,7 +301,7 @@ export class MyGrid extends LitElement{
         <div class="body__container">
             <div class="header">
                 <div class="toggle__menu" id="toggle__menu">
-                    <toggle-menu></toggle-menu>
+                    <toggle-menu ></toggle-menu>
                 </div>
                 <h2 class="header__title">CampusShop</h2>
                 <nav class="header__nav" id="header__nav">
@@ -316,7 +316,7 @@ export class MyGrid extends LitElement{
                 </div>
             </div>
             
-            <main id="main" ${(localStorage.getItem("show") === "main__z__index") ? html`class="main__z__index"` : ""}>
+            <main id="main" class="${(""+localStorage.getItem('show') == "0") ? 'main__z__index' : ''}">
                 <h2 class="title__main">${this.title}</h2>
                 ${console.log(this.carrito)}
                 <div class="main__list carrito__main__list">

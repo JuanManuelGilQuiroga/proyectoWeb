@@ -75,7 +75,6 @@ export class Product extends LitElement{
         width: 45%;
         border-radius: 15px;
         transition: all 0.3s;
-    
         animation: reveal linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 30%;
