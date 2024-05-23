@@ -12,21 +12,27 @@ export class ToggleMenu extends LitElement{
         //this.show = localStorage.getItem("show") || ""
     }
 
-    mostrarMenu(e){
+    /*mostrarMenu(e){
         this.show = "header__nav__show"
         localStorage.setItem("show", "main__z__index")
-        document.body.children[0].shadowRoot.querySelector(".main__list").innerHTML = "bbb<product-item></product-item>"
-    }
+        //document.body.children[0].shadowRoot.querySelector(".main__list").innerHTML = "<product-item></product-item>"
+    }*/
 
     changeSection(sectionChanged){
         this.section = sectionChanged;
         localStorage.setItem("section", this.section)
-        localStorage.setItem("show", "0")
-        document.body.children[0].shadowRoot.querySelector(".main__list").innerHTML = "aaa<product-item></product-item>"
+        //localStorage.setItem("show", "0")
+        //document.body.children[0].shadowRoot.querySelector(".main__list").innerHTML = "<product-item></product-item>"
         location.href = "/"
     }
 
     static styles = css`
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "NunitoSans-Medium";
+    }
     i{
         font-size: 2em;
         color: var(--color-white);
@@ -40,8 +46,7 @@ export class ToggleMenu extends LitElement{
     }
     .header__nav{
         position: absolute;
-        transition: transform 0.3s;
-        transform: translateY(-200%);
+        transition: transform 0.3s;;
         top: 0;
         right: 0;
         left: 0;
@@ -57,9 +62,6 @@ export class ToggleMenu extends LitElement{
         justify-content: space-evenly;
         background-color: var(--color-black);
     }
-    .header__nav__show{
-        transform: translateY(0);
-    }
     .menu__item{
         position: sticky;
         color: var(--color-white);
@@ -70,8 +72,6 @@ id="header__nav"
     render(){
         return html`
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-        <i class='bx bx-menu' id="rayas" @click="${this.mostrarMenu}"></i>
-
         <nav class="header__nav ${this.show}" >
             <ul class="header__menu" id="header__menu">
                 <li><a class="menu__item" id="link__1" @click=${()=>this.changeSection("ropa")}><i class='bx bxs-star'></i>Todos los productos</a></li>

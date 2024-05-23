@@ -16,7 +16,7 @@ export class MyGrid extends LitElement{
     }
     constructor(){
         super();
-        this.section = localStorage.getItem("section");
+        this.section = localStorage.getItem("section") || "ropa";
         this.title = "";
         this.carrito = [];
         this.show = sessionStorage.getItem("show")
@@ -34,7 +34,11 @@ export class MyGrid extends LitElement{
             this.title = "CARRITO"
         }
     }
-
+    ejemplo(e){
+        let menu = this.shadowRoot
+        menu.querySelector("toggle-menu").classList.toggle("toggle__menu__show")
+        
+    }
     connectedCallback(){
         super.connectedCallback();
         this.changeSectionTitle();
@@ -97,6 +101,7 @@ export class MyGrid extends LitElement{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 10
     }
     .toggle__menu i{
         font-size: 2em;
@@ -110,6 +115,9 @@ export class MyGrid extends LitElement{
         font-family: "Staatliches";
         color: var(--color-white);
         animation: blink 2s linear reverse infinite;
+    }
+    .header__nav{
+        display: none
     }
 
     /* animacion para parpadear */
@@ -133,7 +141,7 @@ export class MyGrid extends LitElement{
         font-size: 2em;
         color: var(--color-white);
     }
-    .header__nav{
+    toggle-menu{
         position: absolute;
         transition: transform 0.3s;
         transform: translateY(-200%);
@@ -143,7 +151,11 @@ export class MyGrid extends LitElement{
         height: 50vh;
         z-index: 10;
     }
-    .header__nav__show{
+    .header__nav{
+        height: 50vh;
+    }
+    
+    .toggle__menu__show{
         transform: translateY(0);
     }
     .header__copy{
@@ -186,11 +198,12 @@ export class MyGrid extends LitElement{
     }
     my-cart{
         width: 100%;
-        height: 100%;
+        height: 80%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px
+        gap: 15px;
+        overflow-y: scroll
     }
     @media screen and (min-width:760px){
         .body__container{
@@ -276,7 +289,7 @@ export class MyGrid extends LitElement{
         my-cart{
             padding: 0 5%;
             width: 100%;
-            height: 100%;
+            height: 80%;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -290,9 +303,6 @@ export class MyGrid extends LitElement{
             width: 100%
         }
     }
-    .main__z__index{
-        z-index: -10;
-    }
     `
     render(){
         return html`
@@ -301,6 +311,7 @@ export class MyGrid extends LitElement{
         <div class="body__container">
             <div class="header">
                 <div class="toggle__menu" id="toggle__menu">
+                    <i class='bx bx-menu' id="rayas" @click="${this.ejemplo}"></i>
                     <toggle-menu ></toggle-menu>
                 </div>
                 <h2 class="header__title">CampusShop</h2>
@@ -316,7 +327,7 @@ export class MyGrid extends LitElement{
                 </div>
             </div>
             
-            <main id="main" class="${(""+localStorage.getItem('show') == "0") ? 'main__z__index' : ''}">
+            <main id="main">
                 <h2 class="title__main">${this.title}</h2>
                 ${console.log(this.carrito)}
                 <div class="main__list carrito__main__list">

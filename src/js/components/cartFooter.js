@@ -22,7 +22,7 @@ export class CartFooter extends LitElement{
     }
     .carrito__main__footer{
         width: 100%;
-        margin: 5%;
+        margin: 5% 0;
         display: flex;
         justify-content: space-between;
     }

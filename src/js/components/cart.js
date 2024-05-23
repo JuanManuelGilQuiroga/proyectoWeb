@@ -165,6 +165,19 @@ export class Cart extends LitElement{
             text-shadow: 0px 0px 10px var(--color-white);
         }
     }
+    @keyframes reveal{
+        from{
+            scale: .8;
+            opacity: 0;
+            translate: 0 100px;
+        }
+    
+        to{
+            scale: 1;
+            translate: 0 0;
+            opacity: 1;
+        }
+    }
     `
 
     render(){
